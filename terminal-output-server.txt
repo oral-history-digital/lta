@@ -1,0 +1,667 @@
+
+adg 19:38$ ls -l
+insgesamt 0
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:41 adg2740
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2742
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2744
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2746
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2749
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2750
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2751
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2752
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2753
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2754
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2756
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2757
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2758
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2759
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2760
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2761
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2762
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2763
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2764
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2767
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2768
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2769
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2770
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2771
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2773
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2774
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2776
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2778
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2779
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2781
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2782
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2783
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2785
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2786
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2787
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2788
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2789
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2790
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2791
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2792
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2793
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2795
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2796
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2798
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2799
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2800
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2803
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2804
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2806
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2807
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2808
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2810
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2812
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2813
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2815
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg2816
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg3047
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg3049
+drwxrwxr-x 2 root ohd-upload 0 18. Feb 10:26 adg3050
+drwxrwxr-x 2 root ohd-upload 0 21. Feb 09:25 CLARINDocu
+adg 19:38$ ls -lh *
+adg2740:
+insgesamt 11G
+-rw-rw-r-- 1 root ohd-upload 11G 18. Feb 10:39 ADG2740_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 30K  9. Nov 08:33 ADG2740_01_01_tc_tab.ods
+
+adg2742:
+insgesamt 23G
+-rw-rw-r-- 1 root ohd-upload 23G 21. Sep 11:49 ADG2742_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 66K 15. Nov 13:22 ADG2742_01_01_tc_tab.ods
+
+adg2744:
+insgesamt 2,0G
+-rw-rw-r-- 1 root ohd-upload 2,0G 21. Sep 13:36 ADG2744_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  38K 27. Jan 12:34 adg2744_01_01_tc_tab.ods
+
+adg2746:
+insgesamt 2,7G
+-rw-rw-r-- 1 root ohd-upload 2,7G 21. Sep 13:48 ADG2746_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  45K  9. Nov 08:33 ADG2746_01_01_tc_tab.ods
+
+adg2749:
+insgesamt 28G
+-rw-rw-r-- 1 root ohd-upload 28G 23. Sep 02:45 ADG2749_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 66K  9. Nov 08:33 ADG2749_01_01_tc_tab.ods
+
+adg2750:
+insgesamt 26G
+-rw-rw-r-- 1 root ohd-upload 26G 23. Sep 02:51 ADG2750_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 74K  9. Nov 08:33 ADG2750_01_01_tc_tab.ods
+
+adg2751:
+insgesamt 1,3G
+-rw-rw-r-- 1 root ohd-upload 1,3G 23. Sep 09:24 ADG2751_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  25K  8. Nov 22:47 ADG2751_01_01_tc_tab.ods
+
+adg2752:
+insgesamt 8,1G
+-rw-rw-r-- 1 root ohd-upload 812M 23. Sep 09:31 ADG2752_10_01_master.avi
+-rw-rw-r-- 1 root ohd-upload  22K 16. Jan 11:49 ADG2752_10_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 874M 23. Sep 07:37 ADG2752_10_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  19K  8. Nov 22:47 ADG2752_10_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 828M 23. Sep 07:38 ADG2752_10_03_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K  8. Nov 22:47 ADG2752_10_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 816M 23. Sep 07:43 ADG2752_10_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K  8. Nov 22:47 ADG2752_10_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 805M 23. Sep 07:43 ADG2752_10_05_master.avi
+-rw-rw-r-- 1 root ohd-upload  19K 28. Jan 09:19 adg2752_10_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 793M 23. Sep 07:51 ADG2752_10_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  18K 28. Jan 09:19 adg2752_10_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 805M 23. Sep 07:51 ADG2752_10_07_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K 28. Jan 09:19 adg2752_10_07_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 817M 23. Sep 07:56 ADG2752_10_08_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K 28. Jan 09:19 adg2752_10_08_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 813M 23. Sep 07:55 ADG2752_10_09_master.avi
+-rw-rw-r-- 1 root ohd-upload  19K 28. Jan 09:19 adg2752_10_09_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 906M 23. Sep 08:01 ADG2752_10_10_master.avi
+-rw-rw-r-- 1 root ohd-upload  21K 28. Jan 09:19 adg2752_10_10_tc_tab.ods
+
+adg2753:
+insgesamt 1,7G
+-rw-rw-r-- 1 root ohd-upload 1,6G 23. Sep 08:05 ADG2753_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  26K  8. Nov 22:47 ADG2753_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 110M 23. Sep 08:02 ADG2753_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload 4,1K  8. Nov 22:47 ADG2753_02_02_tc_tab.ods
+
+adg2754:
+insgesamt 3,9G
+-rw-rw-r-- 1 root ohd-upload 3,9G 23. Sep 08:24 ADG2754_01_01_master.mp4
+-rw-rw-r-- 1 root ohd-upload  47K 27. Jan 12:34 adg2754_01_01_tc_tab.ods
+
+adg2756:
+insgesamt 8,1G
+-rw-rw-r-- 1 root ohd-upload 816M 23. Sep 08:10 ADG2756_10_01_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K  8. Nov 22:47 ADG2756_10_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 827M 23. Sep 08:14 ADG2756_10_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K  8. Nov 22:47 ADG2756_10_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 864M 23. Sep 08:19 ADG2756_10_03_master.avi
+-rw-rw-r-- 1 root ohd-upload 941M 23. Sep 08:24 ADG2756_10_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  21K  8. Nov 22:47 ADG2756_10_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 688M 23. Sep 08:28 ADG2756_10_05_master.avi
+-rw-rw-r-- 1 root ohd-upload  17K  8. Nov 22:47 ADG2756_10_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 792M 23. Sep 08:28 ADG2756_10_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K  8. Nov 22:47 ADG2756_10_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 794M 23. Sep 08:32 ADG2756_10_07_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K  8. Nov 22:47 ADG2756_10_07_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 831M 23. Sep 08:33 ADG2756_10_08_master.avi
+-rw-rw-r-- 1 root ohd-upload  19K  8. Nov 22:47 ADG2756_10_08_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 846M 23. Sep 08:38 ADG2756_10_09_master.avi
+-rw-rw-r-- 1 root ohd-upload  18K  8. Nov 22:47 ADG2756_10_09_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 877M 23. Sep 08:42 ADG2756_10_10_master.avi
+-rw-rw-r-- 1 root ohd-upload  20K  8. Nov 22:47 ADG2756_10_10_tc_tab.ods
+
+adg2757:
+insgesamt 11G
+-rw-rw-r-- 1 root ohd-upload 11G 23. Sep 10:30 ADG2757_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 30K  8. Nov 22:47 ADG2757_01_01_tc_tab.ods
+
+adg2758:
+insgesamt 2,1G
+-rw-rw-r-- 1 root ohd-upload 2,1G 23. Sep 09:01 ADG2758_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  37K  8. Nov 22:47 ADG2758_01_01_tc_tab.ods
+
+adg2759:
+insgesamt 3,6G
+-rw-rw-r-- 1 root ohd-upload 1,1G 23. Sep 09:37 ADG2759_03_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  14K  8. Nov 22:47 ADG2759_03_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1,4G 23. Sep 09:44 ADG2759_03_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload  18K  8. Nov 22:47 ADG2759_03_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1,2G 23. Sep 09:51 ADG2759_03_03_master.MP4
+-rw-rw-r-- 1 root ohd-upload  18K  8. Nov 22:47 ADG2759_03_03_tc_tab.ods
+
+adg2760:
+insgesamt 1,2G
+-rw-rw-r-- 1 root ohd-upload 865M 23. Sep 09:57 ADG2760_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  13K  8. Nov 22:47 ADG2760_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 268M 23. Sep 09:59 ADG2760_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload 6,5K  8. Nov 22:47 ADG2760_02_02_tc_tab.ods
+
+adg2761:
+insgesamt 4,1G
+-rw-rw-r-- 1 root ohd-upload 784M 23. Sep 10:05 ADG2761_05_01_master.avi
+-rw-rw-r-- 1 root ohd-upload  27K 28. Jan 15:06 adg2761_05_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 840M 23. Sep 10:10 ADG2761_05_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  30K 28. Jan 15:06 adg2761_05_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 919M 23. Sep 10:15 ADG2761_05_03_master.avi
+-rw-rw-r-- 1 root ohd-upload  30K 28. Jan 15:06 adg2761_05_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 915M 23. Sep 10:20 ADG2761_05_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  30K 28. Jan 15:06 adg2761_05_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 695M 23. Sep 10:24 ADG2761_05_05_master.avi
+-rw-rw-r-- 1 root ohd-upload  17K 28. Jan 15:06 adg2761_05_05_tc_tab.ods
+
+adg2762:
+insgesamt 41G
+-rw-rw-r-- 1 root ohd-upload  41G 24. Sep 02:34 ADG2762_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  38K 27. Jan 12:34 adg2762_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 203M 23. Sep 22:43 ADG2762_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload 2,4K 27. Jan 12:34 adg2762_02_02_tc_tab.ods
+
+adg2763:
+insgesamt 2,6G
+-rw-rw-r-- 1 root ohd-upload 2,6G 23. Sep 22:59 ADG2763_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  36K 11. Jan 10:42 adg2763_01_01_tc_tab.ods
+
+adg2764:
+insgesamt 32G
+-rw-rw-r-- 1 root ohd-upload 32G 24. Sep 01:59 ADG2764_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload 39K 11. Jan 10:42 adg2764_01_01_tc_tab.ods
+
+adg2767:
+insgesamt 8,1G
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 02:04 ADG2767_11_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   17K 11. Jan 10:42 adg2767_11_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  113M 24. Sep 02:04 ADG2767_11_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,0K 11. Jan 10:42 adg2767_11_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 02:10 ADG2767_11_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2767_11_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   78M 24. Sep 02:10 ADG2767_11_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  3,7K 11. Jan 10:42 adg2767_11_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1006M 24. Sep 02:16 ADG2767_11_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2767_11_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  882M 24. Sep 02:21 ADG2767_11_06_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2767_11_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  982M 24. Sep 02:26 ADG2767_11_07_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2767_11_07_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1013M 24. Sep 02:33 ADG2767_11_08_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2767_11_08_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  990M 24. Sep 02:38 ADG2767_11_09_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2767_11_09_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 02:40 ADG2767_11_10_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2767_11_10_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  111M 24. Sep 02:39 ADG2767_11_11_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,5K 11. Jan 10:42 adg2767_11_11_tc_tab.ods
+
+adg2768:
+insgesamt 801M
+-rw-rw-r-- 1 root ohd-upload 801M 24. Sep 06:51 ADG2768_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  16K 11. Jan 10:42 adg2768_01_01_tc_tab.ods
+
+adg2769:
+insgesamt 1,7G
+-rw-rw-r-- 1 root ohd-upload 1,5G 24. Sep 06:53 ADG2769_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  28K 11. Jan 10:42 adg2769_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 127M 24. Sep 06:52 ADG2769_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload 4,5K 11. Jan 10:42 adg2769_02_02_tc_tab.ods
+
+adg2770:
+insgesamt 4,1G
+-rw-rw-r-- 1 root ohd-upload  838M 24. Sep 07:12 ADG2770_07_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   22K 11. Jan 10:42 adg2770_07_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  997M 24. Sep 07:22 ADG2770_07_02_master.avi
+-rw-rw-r-- 1 root ohd-upload   24K 11. Jan 10:42 adg2770_07_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 07:44 ADG2770_07_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   26K 11. Jan 10:42 adg2770_07_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   21M 24. Sep 07:23 ADG2770_07_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  3,0K 11. Jan 10:42 adg2770_07_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 07:52 ADG2770_07_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   24K 11. Jan 10:42 adg2770_07_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  111M 24. Sep 07:48 ADG2770_07_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,2K 11. Jan 10:42 adg2770_07_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  176M 24. Sep 07:51 ADG2770_07_07_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,6K 11. Jan 10:42 adg2770_07_07_tc_tab.ods
+
+adg2771:
+insgesamt 4,1G
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 08:11 ADG2771_07_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   26K 11. Jan 10:42 adg2771_07_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  3,8M 24. Sep 07:52 ADG2771_07_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  2,4K 11. Jan 10:42 adg2771_07_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 08:20 ADG2771_07_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   26K 11. Jan 10:42 adg2771_07_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   42M 24. Sep 08:12 ADG2771_07_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  3,5K 11. Jan 10:42 adg2771_07_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 08:27 ADG2771_07_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   23K 11. Jan 10:42 adg2771_07_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  111M 24. Sep 08:23 ADG2771_07_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,0K 11. Jan 10:42 adg2771_07_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  902M 24. Sep 08:29 ADG2771_07_07_master.avi
+-rw-rw-r-- 1 root ohd-upload   20K 11. Jan 10:42 adg2771_07_07_tc_tab.ods
+
+adg2773:
+insgesamt 2,6G
+-rw-rw-r-- 1 root ohd-upload 2,6G 24. Sep 08:41 ADG2773_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  46K 27. Jan 12:34 adg2773_01_01_tc_tab.ods
+
+adg2774:
+insgesamt 1,6G
+-rw-rw-r-- 1 root ohd-upload 1,6G 24. Sep 08:38 ADG2774_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  22K 11. Jan 10:42 adg2774_01_01_tc_tab.ods
+
+adg2776:
+insgesamt 1,3G
+-rw-rw-r-- 1 root ohd-upload 771M 24. Sep 08:43 ADG2776_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  15K 11. Jan 10:42 adg2776_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 501M 24. Sep 08:43 ADG2776_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload  12K 11. Jan 10:42 adg2776_02_02_tc_tab.ods
+
+adg2778:
+insgesamt 12G
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 08:49 ADG2778_19_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   15K 11. Jan 10:42 adg2778_19_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   86M 24. Sep 08:44 ADG2778_19_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  3,5K 11. Jan 10:42 adg2778_19_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 08:49 ADG2778_19_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   15K 11. Jan 10:42 adg2778_19_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  178M 24. Sep 08:50 ADG2778_19_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,6K 11. Jan 10:42 adg2778_19_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 08:55 ADG2778_19_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   15K 11. Jan 10:42 adg2778_19_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  268M 24. Sep 08:51 ADG2778_19_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,5K 11. Jan 10:42 adg2778_19_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  524M 24. Sep 08:54 ADG2778_19_07_master.avi
+-rw-rw-r-- 1 root ohd-upload  8,4K 11. Jan 10:42 adg2778_19_07_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:00 ADG2778_19_08_master.avi
+-rw-rw-r-- 1 root ohd-upload   11K 11. Jan 10:42 adg2778_19_08_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   99M 24. Sep 08:56 ADG2778_19_09_master.avi
+-rw-rw-r-- 1 root ohd-upload  3,8K 11. Jan 10:42 adg2778_19_09_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:05 ADG2778_19_10_master.avi
+-rw-rw-r-- 1 root ohd-upload   14K 11. Jan 10:42 adg2778_19_10_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  294M 24. Sep 09:09 ADG2778_19_11_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,6K 11. Jan 10:42 adg2778_19_11_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:26 ADG2778_19_12_master.avi
+-rw-rw-r-- 1 root ohd-upload   14K 11. Jan 10:42 adg2778_19_12_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  360M 24. Sep 09:13 ADG2778_19_13_master.avi
+-rw-rw-r-- 1 root ohd-upload  6,3K 11. Jan 10:42 adg2778_19_13_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:21 ADG2778_19_14_master.avi
+-rw-rw-r-- 1 root ohd-upload   14K 11. Jan 10:42 adg2778_19_14_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  346M 24. Sep 09:21 ADG2778_19_15_master.avi
+-rw-rw-r-- 1 root ohd-upload  6,3K 11. Jan 10:42 adg2778_19_15_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:29 ADG2778_19_16_master.avi
+-rw-rw-r-- 1 root ohd-upload   13K 11. Jan 10:42 adg2778_19_16_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  396M 24. Sep 09:23 ADG2778_19_17_master.avi
+-rw-rw-r-- 1 root ohd-upload  6,8K 11. Jan 10:42 adg2778_19_17_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:31 ADG2778_19_18_master.avi
+-rw-rw-r-- 1 root ohd-upload   14K 11. Jan 10:42 adg2778_19_18_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  412M 24. Sep 09:32 ADG2778_19_19_master.avi
+-rw-rw-r-- 1 root ohd-upload  6,9K 11. Jan 10:42 adg2778_19_19_tc_tab.ods
+
+adg2779:
+insgesamt 8,1G
+-rw-rw-r-- 1 root ohd-upload  975M 24. Sep 09:37 ADG2779_11_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2779_11_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  985M 24. Sep 09:38 ADG2779_11_02_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2779_11_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:42 ADG2779_11_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2779_11_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   20M 24. Sep 09:38 ADG2779_11_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  2,6K 11. Jan 10:42 adg2779_11_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 09:43 ADG2779_11_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   17K 11. Jan 10:42 adg2779_11_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   97M 24. Sep 09:43 ADG2779_11_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,0K 11. Jan 10:42 adg2779_11_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  831M 24. Sep 09:48 ADG2779_11_07_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2779_11_07_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  837M 24. Sep 09:48 ADG2779_11_08_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2779_11_08_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  864M 24. Sep 09:53 ADG2779_11_09_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2779_11_09_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  873M 24. Sep 09:53 ADG2779_11_10_master.avi
+-rw-rw-r-- 1 root ohd-upload   17K 11. Jan 10:42 adg2779_11_10_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  740M 24. Sep 10:02 ADG2779_11_11_master.avi
+-rw-rw-r-- 1 root ohd-upload   15K 11. Jan 10:42 adg2779_11_11_tc_tab.ods
+
+adg2781:
+insgesamt 3,1G
+-rw-rw-r-- 1 root ohd-upload 3,1G  7. Feb 12:39 ADG2781_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  59K  8. Feb 14:05 ADG2781_01_01_tc_tab.ods
+
+adg2782:
+insgesamt 59G
+-rw-rw-r-- 1 root ohd-upload  27G 24. Sep 12:38 ADG2782_03_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  34K 27. Jan 12:34 adg2782_03_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  32G 24. Sep 13:09 ADG2782_03_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload  39K 27. Jan 12:34 adg2782_03_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  14M 24. Sep 12:38 ADG2782_03_03_master.MP4
+-rw-rw-r-- 1 root ohd-upload 2,3K 27. Jan 12:34 adg2782_03_03_tc_tab.ods
+
+adg2783:
+insgesamt 4,0G
+-rw-rw-r-- 1 root ohd-upload 695M 24. Sep 12:41 ADG2783_05_01_master.avi
+-rw-rw-r-- 1 root ohd-upload  19K 11. Jan 10:42 adg2783_05_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 792M 24. Sep 12:45 ADG2783_05_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  23K 11. Jan 10:42 adg2783_05_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 774M 24. Sep 12:49 ADG2783_05_03_master.avi
+-rw-rw-r-- 1 root ohd-upload  23K 11. Jan 10:42 adg2783_05_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 883M 24. Sep 12:54 ADG2783_05_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  24K 11. Jan 10:42 adg2783_05_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 924M 24. Sep 12:59 ADG2783_05_05_master.avi
+-rw-rw-r-- 1 root ohd-upload  25K 11. Jan 10:42 adg2783_05_05_tc_tab.ods
+
+adg2785:
+insgesamt 4,0G
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 13:05 ADG2785_06_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   20K 11. Jan 10:42 adg2785_06_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  254M 24. Sep 13:06 ADG2785_06_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  6,7K 11. Jan 10:42 adg2785_06_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  1,0G 24. Sep 13:12 ADG2785_06_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2785_06_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  302M 24. Sep 13:11 ADG2785_06_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  7,8K 11. Jan 10:42 adg2785_06_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 13:34 ADG2785_06_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2785_06_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  468M 24. Sep 13:24 ADG2785_06_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  9,8K 11. Jan 10:42 adg2785_06_06_tc_tab.ods
+
+adg2786:
+insgesamt 2,1G
+-rw-rw-r-- 1 root ohd-upload 2,1G 24. Sep 14:09 ADG2786_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  35K 11. Jan 10:42 adg2786_01_01_tc_tab.ods
+
+adg2787:
+insgesamt 1,3G
+-rw-rw-r-- 1 root ohd-upload 1,3G 24. Sep 14:01 ADG2787_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  28K 11. Jan 10:42 adg2787_01_01_tc_tab.ods
+
+adg2788:
+insgesamt 1,6G
+-rw-rw-r-- 1 root ohd-upload 1,6G 24. Sep 14:43 ADG2788_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  29K 11. Jan 10:42 adg2788_01_01_tc_tab.ods
+
+adg2789:
+insgesamt 2,4G
+-rw-rw-r-- 1 root ohd-upload 1,2G 24. Sep 14:42 ADG2789_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  21K 11. Jan 10:42 adg2789_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1,2G 24. Sep 14:51 ADG2789_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload  20K 11. Jan 10:42 adg2789_02_02_tc_tab.ods
+
+adg2790:
+insgesamt 16G
+-rw-rw-r-- 1 root ohd-upload 16G 24. Sep 15:57 ADG2790_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 37K 11. Jan 10:42 adg2790_01_01_tc_tab.ods
+
+adg2791:
+insgesamt 1,5G
+-rw-rw-r-- 1 root ohd-upload 1,5G 24. Sep 15:00 ADG2791_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  28K 11. Jan 10:42 adg2791_01_01_tc_tab.ods
+
+adg2792:
+insgesamt 3,2G
+-rw-rw-r-- 1 root ohd-upload 3,2G 24. Sep 15:19 ADG2792_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  54K 11. Jan 10:42 adg2792_01_01_tc_tab.ods
+
+adg2793:
+insgesamt 4,1G
+-rw-rw-r-- 1 root ohd-upload  1,0G 24. Sep 15:24 ADG2793_07_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   19K 11. Jan 10:42 adg2793_07_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  141M 24. Sep 15:25 ADG2793_07_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,7K 11. Jan 10:42 adg2793_07_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 15:30 ADG2793_07_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   24K 11. Jan 10:42 adg2793_07_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   29M 24. Sep 15:30 ADG2793_07_04_master.avi
+-rw-rw-r-- 1 root ohd-upload  3,1K 11. Jan 10:42 adg2793_07_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 15:36 ADG2793_07_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   23K 11. Jan 10:42 adg2793_07_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload   77M 24. Sep 15:36 ADG2793_07_06_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,4K 11. Jan 10:42 adg2793_07_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  802M 24. Sep 15:41 ADG2793_07_07_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 11. Jan 10:42 adg2793_07_07_tc_tab.ods
+
+adg2795:
+insgesamt 18G
+-rw-rw-r-- 1 root ohd-upload 18G 24. Sep 18:48 ADG2795_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 45K 11. Jan 10:42 adg2795_01_01_tc_tab.ods
+
+adg2796:
+insgesamt 34G
+-rw-rw-r-- 1 root ohd-upload 34G 24. Sep 21:00 ADG2796_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 67K 27. Jan 12:34 adg2796_01_01_tc_tab.ods
+
+adg2798:
+insgesamt 2,8G
+-rw-rw-r-- 1 root ohd-upload 1,9G 24. Sep 18:59 ADG2798_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  28K 18. Jan 17:41 adg2798_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 885M 24. Sep 19:04 ADG2798_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload  14K 18. Jan 17:41 adg2798_02_02_tc_tab.ods
+
+adg2799:
+insgesamt 16G
+-rw-rw-r-- 1 root ohd-upload 16G 24. Sep 20:48 ADG2799_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 41K 27. Jan 12:34 adg2799_01_01_tc_tab.ods
+
+adg2800:
+insgesamt 18G
+-rw-rw-r-- 1 root ohd-upload 18G 24. Sep 23:08 ADG2800_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 38K 18. Jan 17:41 adg2800_01_01_tc_tab.ods
+
+adg2803:
+insgesamt 8,1G
+-rw-rw-r-- 1 root ohd-upload  832M 24. Sep 21:47 ADG2803_12_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 18. Jan 17:41 adg2803_12_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  848M 24. Sep 21:51 ADG2803_12_02_master.avi
+-rw-rw-r-- 1 root ohd-upload   20K 18. Jan 17:41 adg2803_12_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  892M 24. Sep 21:57 ADG2803_12_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   20K 18. Jan 17:41 adg2803_12_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  919M 24. Sep 22:01 ADG2803_12_04_master.avi
+-rw-rw-r-- 1 root ohd-upload   20K 18. Jan 17:41 adg2803_12_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  666M 24. Sep 22:05 ADG2803_12_05_master.avi
+-rw-rw-r-- 1 root ohd-upload   14K 18. Jan 17:41 adg2803_12_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 22:11 ADG2803_12_06_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 18. Jan 17:41 adg2803_12_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  120M 24. Sep 22:11 ADG2803_12_07_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,3K 18. Jan 17:41 adg2803_12_07_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 24. Sep 22:18 ADG2803_12_08_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 18. Jan 17:41 adg2803_12_08_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  135M 24. Sep 22:18 ADG2803_12_09_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,7K 18. Jan 17:41 adg2803_12_09_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  1,0G 24. Sep 22:25 ADG2803_12_10_master.avi
+-rw-rw-r-- 1 root ohd-upload   16K 18. Jan 17:41 adg2803_12_10_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  182M 24. Sep 22:26 ADG2803_12_11_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,2K 18. Jan 17:41 adg2803_12_11_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  616M 24. Sep 22:29 ADG2803_12_12_master.avi
+-rw-rw-r-- 1 root ohd-upload  7,7K 18. Jan 17:41 adg2803_12_12_tc_tab.ods
+
+adg2804:
+insgesamt 32G
+-rw-rw-r-- 1 root ohd-upload 32G 25. Sep 00:22 ADG2804_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 81K 27. Jan 12:34 adg2804_01_01_tc_tab.ods
+
+adg2806:
+insgesamt 1,3G
+-rw-rw-r-- 1 root ohd-upload 673M 24. Sep 23:12 ADG2806_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  16K 18. Jan 17:41 adg2806_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 640M 24. Sep 23:15 ADG2806_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload  16K 18. Jan 17:41 adg2806_02_02_tc_tab.ods
+
+adg2807:
+insgesamt 24G
+-rw-rw-r-- 1 root ohd-upload 24G 27. Sep 16:13 ADG2807_01_01_master.m2ts
+-rw-rw-r-- 1 root ohd-upload 54K  8. Feb 14:05 ADG2807_01_01_tc_tab.ods
+
+adg2808:
+insgesamt 3,0G
+-rw-rw-r-- 1 root ohd-upload 2,9G 25. Sep 08:30 ADG2808_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  46K  8. Feb 14:05 ADG2808_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  72M 25. Sep 08:30 ADG2808_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload 2,4K  8. Feb 14:05 ADG2808_02_02_tc_tab.ods
+
+adg2810:
+insgesamt 2,5G
+-rw-rw-r-- 1 root ohd-upload 2,5G 25. Sep 08:45 ADG2810_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  46K 27. Jan 12:34 adg2810_01_01_tc_tab.ods
+
+adg2812:
+insgesamt 2,9G
+-rw-rw-r-- 1 root ohd-upload 2,9G  7. Feb 12:50 ADG2812_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  57K  8. Feb 14:05 ADG2812_01_01_tc_tab.ods
+
+adg2813:
+insgesamt 45G
+-rw-rw-r-- 1 root ohd-upload  41G 25. Sep 12:07 ADG2813_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  44K 27. Jan 12:34 adg2813_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 3,9G 25. Sep 10:47 ADG2813_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload 5,7K 18. Jan 17:41 adg2813_02_02_tc_tab.ods
+
+adg2815:
+insgesamt 7,4G
+-rw-rw-r-- 1 root ohd-upload 1023M 25. Sep 10:53 ADG2815_12_01_master.avi
+-rw-rw-r-- 1 root ohd-upload   15K 18. Jan 17:41 adg2815_12_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  201M 25. Sep 10:54 ADG2815_12_02_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,1K 18. Jan 17:41 adg2815_12_02_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 25. Sep 10:59 ADG2815_12_03_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 18. Jan 17:41 adg2815_12_03_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 25. Sep 11:05 ADG2815_12_04_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 18. Jan 17:41 adg2815_12_04_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  197M 25. Sep 11:06 ADG2815_12_05_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,4K 18. Jan 17:41 adg2815_12_05_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 25. Sep 11:11 ADG2815_12_06_master.avi
+-rw-rw-r-- 1 root ohd-upload   18K 18. Jan 17:41 adg2815_12_06_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  157M 25. Sep 11:12 ADG2815_12_07_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,8K 18. Jan 17:41 adg2815_12_07_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 25. Sep 11:18 ADG2815_12_08_master.avi
+-rw-rw-r-- 1 root ohd-upload   17K 18. Jan 17:41 adg2815_12_08_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  120M 25. Sep 11:18 ADG2815_12_09_master.avi
+-rw-rw-r-- 1 root ohd-upload  4,3K 18. Jan 17:41 adg2815_12_09_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1023M 25. Sep 11:24 ADG2815_12_10_master.avi
+-rw-rw-r-- 1 root ohd-upload   17K 18. Jan 17:41 adg2815_12_10_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  227M 25. Sep 11:25 ADG2815_12_11_master.avi
+-rw-rw-r-- 1 root ohd-upload  5,6K 18. Jan 17:41 adg2815_12_11_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload  513M 25. Sep 11:29 ADG2815_12_12_master.avi
+-rw-rw-r-- 1 root ohd-upload  9,3K 18. Jan 17:41 adg2815_12_12_tc_tab.ods
+
+adg2816:
+insgesamt 48G
+-rw-rw-r-- 1 root ohd-upload  41G 27. Sep 18:01 ADG2816_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  47K 18. Jan 17:41 adg2816_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 6,8G 25. Sep 22:59 ADG2816_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload 8,5K 18. Jan 17:41 adg2816_02_02_tc_tab.ods
+
+adg3047:
+insgesamt 2,7G
+-rw-rw-r-- 1 root ohd-upload 1,1G  7. Feb 12:39 ADG3047_02_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload  23K  8. Feb 14:05 ADG3047_02_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 1,7G  7. Feb 12:50 ADG3047_02_02_master.MP4
+-rw-rw-r-- 1 root ohd-upload  34K  8. Feb 14:05 ADG3047_02_02_tc_tab.ods
+
+adg3049:
+insgesamt 19G
+-rw-rw-r-- 1 root ohd-upload 23K  8. Feb 14:06 ADG3049_01_01_tc_tab.ods
+-rw-rw-r-- 1 root ohd-upload 19G  7. Feb 12:41 ADG3049_01_0_master.MP4
+
+adg3050:
+insgesamt 36G
+-rw-rw-r-- 1 root ohd-upload 36G  7. Feb 12:33 ADG3050_01_01_master.MP4
+-rw-rw-r-- 1 root ohd-upload 49K 17. Feb 22:14 ADG3050_01_01_tc_tab.ods
+
+CLARINDocu:
+insgesamt 0
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:53 ADG2740
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:53 ADG2742
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:53 ADG2744
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 21:55 ADG2746
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:54 ADG2749
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:54 ADG2750
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:54 ADG2751
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:59 ADG2752
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:59 ADG2753
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:53 ADG2754
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:00 ADG2756
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:00 ADG2757
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:04 ADG2758
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:07 ADG2759
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:08 ADG2760
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:09 ADG2761
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:09 ADG2762
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:10 ADG2763
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:10 ADG2764
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:16 ADG2767
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:16 ADG2768
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:17 ADG2769
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:17 ADG2770
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:17 ADG2771
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:19 ADG2773
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:19 ADG2774
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:57 ADG2776
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:34 ADG2778
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2779
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2781
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2782
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2783
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2785
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2786
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2787
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:37 ADG2788
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:38 ADG2789
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:38 ADG2790
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:38 ADG2791
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:38 ADG2792
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:40 ADG2793
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:40 ADG2795
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:40 ADG2796
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:40 ADG2798
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:26 ADG2799
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:33 ADG2800
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:08 ADG2803
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:08 ADG2804
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:09 ADG2806
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:09 ADG2807
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:10 ADG2808
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:10 ADG2810
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 22:00 ADG2812
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 18:14 ADG2815
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 17:58 ADG2816
+drwxrwxr-x 2 root ohd-upload 0 17. Feb 22:00 ADG3047
+adg 19:38$ 
