@@ -9,7 +9,7 @@ import interview_cmdi as cmdi
 ET.register_namespace('', 'http://www.clarin.eu/cmd/')
 
 parser = ArgumentParser()
-parser.add_argument('-f', '--file', type=pathlib.Path, required=True,
+parser.add_argument('file', type=pathlib.Path,
     help='original cmdi xml metadata file')
 parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1')
 
