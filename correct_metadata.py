@@ -5,6 +5,8 @@ import pathlib
 from argparse import ArgumentParser
 import xml.etree.ElementTree as ET
 import interview_cmdi as cmdi
+from media_files import check_directory_integrity
+
 
 ET.register_namespace('', 'http://www.clarin.eu/cmd/')
 
@@ -24,8 +26,6 @@ stem = file.stem
 dir_path = os.path.join(base_path, stem)
 files = os.listdir(dir_path)
 
-print(list(files))
-
 def filter_media_files(filename):
     pair = os.path.splitext(filename)
     ext = pair[1].lower()
@@ -43,18 +43,22 @@ transcript_files = list(filter(filter_transcript_files, list(files)))
 media_files.sort()
 transcript_files.sort()
 
+if (len(media_files) != len(transcript_files)):
+    raise ValueError('Number of media files does not match number of transcript files.')
+
 print(media_files)
 print(transcript_files)
 
 
+check_directory_integrity(dir_path)
 
+
+
+
+# Parse and change xml.
 
 tree = ET.parse(file)
 root = tree.getroot()
-
-for child in root:
-    print(child.tag)
-
 
 cmdi.change_resource_proxy_list(root)
 cmdi.change_media_session_bundle(root)
