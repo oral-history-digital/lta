@@ -16,8 +16,40 @@ parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1')
 args = parser.parse_args()
 
 
+# Directory scanning.
 
-tree = ET.parse(args.file)
+file = args.file
+base_path = '/mnt/trove.storage.fu-berlin.de/ohd-av/bas_packages/adg'
+stem = file.stem
+dir_path = os.path.join(base_path, stem)
+files = os.listdir(dir_path)
+
+print(list(files))
+
+def filter_media_files(filename):
+    pair = os.path.splitext(filename)
+    ext = pair[1].lower()
+    return ext in ['.m2ts', '.mp4', '.avi']
+
+def filter_transcript_files(filename):
+    pair = os.path.splitext(filename)
+    ext = pair[1].lower()
+    return ext in ['.ods', '.pdf']
+
+
+media_files = list(filter(filter_media_files, list(files)))
+transcript_files = list(filter(filter_transcript_files, list(files)))
+
+media_files.sort()
+transcript_files.sort()
+
+print(media_files)
+print(transcript_files)
+
+
+
+
+tree = ET.parse(file)
 root = tree.getroot()
 
 for child in root:
