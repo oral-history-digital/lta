@@ -13,7 +13,8 @@ def filter_transcript_files(filename):
 
 def check_directory_integrity(path):
     files = list(os.listdir(path))
-    files.remove('.DS_Store')
+    if '.DS_Store' in files:
+        files.remove('.DS_Store')
 
     first_file = files[0]
     m = re.search('_(\d{2})_', first_file)

@@ -102,7 +102,8 @@ def change_media_session_bundle(root_elem, num_bundles):
 def change_written_resources(root_elem):
     media_session = get_media_session(root_elem)
     written_resource = media_session.find(f'{ns}WrittenResource')
-    media_session.remove(written_resource)
+    if written_resource:
+        media_session.remove(written_resource)
 
 
 def get_actors(root_elem):

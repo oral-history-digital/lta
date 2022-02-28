@@ -7,12 +7,15 @@ parser = ArgumentParser()
 parser.add_argument('-l', '--local', action='store_true',
     help='use local server', default=False)
 parser.add_argument('-b', '--batch', help='archiving batch number',
-    dest='NUMBER', type=int, default=1)
+    type=int, default=1)
 parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1')
 
 args = parser.parse_args()
 
-if (args.local):
+is_local = args.local
+batch_number = args.batch
+
+if (is_local):
     host = 'http://www.example.com:3000'
 else:
     host = 'https://deutsches-gedaechtnis.fernuni-hagen.de'
@@ -32,7 +35,7 @@ def read_ids():
 
 
 def fetch_collection_metadata():
-    url = f'{host}/de/project/cmdi_metadata.xml?batch={args.batch}'
+    url = f'{host}/de/project/cmdi_metadata.xml?batch={batch_number}'
     r = requests.get(url, allow_redirects=True)
     f = open(f'./cmdis/collection.xml', 'wb')
     f.write(r.content)
@@ -41,7 +44,7 @@ def fetch_collection_metadata():
 
 
 def fetch_interview_metadata(id):
-    url = f'{host}/de/interviews/{id}/cmdi_metadata.xml?batch={args.batch}'
+    url = f'{host}/de/interviews/{id}/cmdi_metadata.xml?batch={batch_number}'
     r = requests.get(url, allow_redirects=True)
     f = open(f'./cmdis/{id}.xml', 'wb')
     f.write(r.content)
