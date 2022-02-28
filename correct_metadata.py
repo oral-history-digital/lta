@@ -70,7 +70,10 @@ def process_file(file):
 parser = ArgumentParser()
 parser.add_argument('files', type=pathlib.Path, nargs='+',
     help='original cmdi xml metadata files')
-parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1')
+parser.add_argument('-t', '--mediatype', choices=['video', 'audio'],
+    default='video', help='type of media files')
+parser.add_argument('-v', '--version', action='version',
+    version='%(prog)s 0.1')
 
 args = parser.parse_args()
 
