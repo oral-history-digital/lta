@@ -35,5 +35,3 @@ def check_directory_integrity(path):
 
     if (len(transcript_files) != num_parts):
         raise ValueError('Wrong number of transcript files.')
-
-    print(num_parts)

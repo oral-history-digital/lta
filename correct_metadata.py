@@ -23,6 +23,7 @@ args = parser.parse_args()
 file = args.file
 base_path = '/mnt/trove.storage.fu-berlin.de/ohd-av/bas_packages/adg'
 stem = file.stem
+interview_id = stem
 dir_path = os.path.join(base_path, stem)
 files = os.listdir(dir_path)
 
@@ -46,13 +47,9 @@ transcript_files.sort()
 if (len(media_files) != len(transcript_files)):
     raise ValueError('Number of media files does not match number of transcript files.')
 
-print(media_files)
-print(transcript_files)
-
-
 check_directory_integrity(dir_path)
 
-
+num_parts = len(media_files)
 
 
 # Parse and change xml.
@@ -60,8 +57,8 @@ check_directory_integrity(dir_path)
 tree = ET.parse(file)
 root = tree.getroot()
 
-cmdi.change_resource_proxy_list(root)
-cmdi.change_media_session_bundle(root)
+cmdi.change_resource_proxy_list(root, interview_id, media_files, transcript_files)
+cmdi.change_media_session_bundle(root, num_parts)
 cmdi.change_written_resources(root)
 
 actors = cmdi.get_actors(root)
