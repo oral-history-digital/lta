@@ -14,7 +14,7 @@ def get_mimetype(filename):
         case '.m2ts':
             return 'video/mpeg'
         case '.avi':
-            return 'video/x-msvideo'
+            return 'video/msvideo'
         case '.pdf':
             return 'application/pdf'
         case '.ods':
