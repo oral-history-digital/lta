@@ -28,7 +28,7 @@ def resource_id(index, prefix):
 
 def write_resource_xml(node, interview_id, filename, index, resource_prefix):
     file_id = resource_id(index + 1, resource_prefix)
-    path = os.path.join(interview_id, filename)
+    path = filename # os.path.join(interview_id, filename)
     mimetype = get_mimetype(filename)
 
     resource_proxy = ET.SubElement(node, 'ResourceProxy', { 'id': file_id })
