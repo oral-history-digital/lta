@@ -11,7 +11,7 @@ ET.register_namespace('', 'http://www.clarin.eu/cmd/')
 
 
 
-def process_file(file):
+def process_file(file, media_type):
     print(f'Processing file {file}...')
     # Directory scanning.
 
@@ -52,7 +52,7 @@ def process_file(file):
     root = tree.getroot()
 
     cmdi.change_resource_proxy_list(root, interview_id, media_files, transcript_files)
-    cmdi.change_media_session_bundle(root, num_parts)
+    cmdi.change_media_session_bundle(root, num_parts, media_type, transcript_files)
     cmdi.change_written_resources(root)
 
     actors = cmdi.get_actors(root)
@@ -78,6 +78,7 @@ parser.add_argument('-v', '--version', action='version',
 args = parser.parse_args()
 
 filenames = list(args.files)
+media_type = args.mediatype
 
 for filename in filenames:
-    process_file(filename)
+    process_file(filename, media_type)
