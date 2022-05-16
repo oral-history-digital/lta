@@ -5,7 +5,7 @@ import os
 ns = '{http://www.clarin.eu/cmd/}'
 
 
-def get_resources_mimetype(filename):
+def get_mimetype(filename):
     extension = filename_to_ext(filename).lower()
 
     match extension:
@@ -21,22 +21,6 @@ def get_resources_mimetype(filename):
             return 'application/vnd.oasis.opendocument.spreadsheet'
 
 
-def get_annotation_bundle_mimetype(filename):
-    extension = filename_to_ext(filename).lower()
-
-    match extension:
-        case '.mp4':
-            return 'video/mp4'
-        case '.m2ts':
-            return 'video/mpeg'
-        case '.avi':
-            return 'video/msvideo'
-        case '.pdf':
-            return 'application/pdf'
-        case '.ods':
-            return 'Unspecified'
-
-
 def resource_id(index, prefix):
     index_str = str(index)
     return f"{prefix}_{index_str.rjust(10, '0')}"
@@ -45,7 +29,7 @@ def resource_id(index, prefix):
 def write_resource_xml(node, interview_id, filename, index, resource_prefix):
     file_id = resource_id(index + 1, resource_prefix)
     path = filename # os.path.join(interview_id, filename)
-    mimetype = get_resources_mimetype(filename)
+    mimetype = get_mimetype(filename)
 
     resource_proxy = ET.SubElement(node, 'ResourceProxy', { 'id': file_id })
     resource_type = ET.SubElement(resource_proxy, 'ResourceType',
@@ -101,7 +85,7 @@ def change_media_session_bundle(root_elem, num_bundles, media_type, transcript_f
         media_type_elem.text = media_type
 
         transcript_file_id = resource_id(index, 'm')
-        transcript_mimetype = get_annotation_bundle_mimetype(
+        transcript_mimetype = get_mimetype(
             transcript_files[index - 1])
         written_resource = ET.SubElement(bundle, 'WrittenResource',
             { 'ref': transcript_file_id, 'actor-ref': actors_str })
