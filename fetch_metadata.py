@@ -37,7 +37,7 @@ def read_ids():
 def fetch_collection_metadata():
     url = f'{host}/de/project/cmdi_metadata.xml?batch={batch_number}'
     r = requests.get(url, allow_redirects=True)
-    f = open(f'./cmdis/collection.xml', 'wb')
+    f = open(f'./cmdis/ohd_adg_{batch_number:03}.xml', 'wb')
     f.write(r.content)
     f.close()
     print("Collection metadata fetched…")
