@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import subprocess
 from argparse import ArgumentParser
 
 dir_name = 'cmdis'
@@ -24,9 +25,9 @@ else:
 
 print(f'Fetching data from host {host}')
 
-def create_output_directory():
-    if not os.path.exists(f'./{dir_name}'):
-        os.mkdir(f'./{dir_name}')
+def create_output_directory(name):
+    if not os.path.exists(f'./{name}'):
+        os.mkdir(f'./{name}')
 
 
 def read_ids():
@@ -44,17 +45,47 @@ def fetch_archive_metadata():
     f.close()
     print(f'{dir_name}/ohd_adg_{batch_number:03}.xml fetched…')
 
+    # Check integrity.
+    cp = subprocess.run([
+        'xmllint',
+        '--schema',
+        'media-corpus-profile.xsd',
+        f'./{dir_name}/ohd_adg_{batch_number:03}.xml',
+        '--noout'
+    ], capture_output=True)
+
+    if cp.returncode == 0:
+        print(f'{dir_name}/ohd_adg_{batch_number:03}.xml validated…')
+
 
 def fetch_interview_metadata(id):
     url = f'{host}/de/interviews/{id}/cmdi_metadata.xml?batch={batch_number}'
     r = requests.get(url, allow_redirects=True)
-    f = open(f'./{dir_name}/{id}.xml', 'wb')
+
+    # Create interview cmdi in separate directory.
+    if not os.path.exists(f'./{dir_name}/{id}'):
+        os.mkdir(f'./{dir_name}/{id}')
+
+    f = open(f'./{dir_name}/{id}/{id}.xml', 'wb')
     f.write(r.content)
     f.close()
-    print(f'{dir_name}/{id}.xml fetched…')
+
+    print(f'{dir_name}/{id}/{id}.xml fetched…')
+
+    # Check integrity.
+    cp = subprocess.run([
+        'xmllint',
+        '--schema',
+        'media-session-profile.xsd',
+        f'{dir_name}/{id}/{id}.xml',
+        '--noout'
+    ], capture_output=True)
+
+    if cp.returncode == 0:
+        print(f'{dir_name}/{id}/{id}.xml validated…')
 
 
-create_output_directory()
+create_output_directory(dir_name)
 fetch_archive_metadata()
 
 ids = read_ids()
