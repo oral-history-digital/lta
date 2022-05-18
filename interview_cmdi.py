@@ -21,6 +21,15 @@ def get_mimetype(filename):
             return 'application/vnd.oasis.opendocument.spreadsheet'
 
 
+def get_media_type(filename):
+    extension = filename_to_ext(filename).lower()
+
+    match extension:
+        case '.mp4' | '.m2ts' | '.avi':
+            return 'video'
+
+
+
 def resource_id(index, prefix):
     index_str = str(index)
     return f"{prefix}_{index_str.rjust(10, '0')}"
