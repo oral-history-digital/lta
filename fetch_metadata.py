@@ -30,10 +30,10 @@ def create_output_directory(name):
         os.mkdir(f'./{name}')
 
 
-def read_ids():
-    f = open('./interview-ids.json')
-    data = json.load(f)
-    f.close()
+def fetch_ids():
+    url = f'{host}/de/project/archiving_batches/{batch_number}.json'
+    response = requests.get(url, allow_redirects=True)
+    data = response.json()
     return data
 
 
@@ -88,6 +88,6 @@ def fetch_interview_metadata(id):
 create_output_directory(dir_name)
 fetch_archive_metadata()
 
-ids = read_ids()
+ids = fetch_ids()
 for id in ids:
     fetch_interview_metadata(id)
