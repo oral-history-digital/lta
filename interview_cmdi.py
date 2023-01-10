@@ -19,6 +19,8 @@ def get_mimetype(filename):
             return 'application/pdf'
         case '.ods':
             return 'application/vnd.oasis.opendocument.spreadsheet'
+        case '.csv':
+            return 'text/plain'
 
 
 def get_media_type(filename):
@@ -112,8 +114,8 @@ def change_media_session_bundle(root_elem, num_bundles, media_type, transcript_f
 
 def change_written_resources(root_elem):
     media_session = get_media_session(root_elem)
-    written_resource = media_session.find(f'{ns}WrittenResource')
-    if written_resource:
+    written_resources = media_session.findall(f'{ns}WrittenResource')
+    for written_resource in written_resources:
         media_session.remove(written_resource)
 
 

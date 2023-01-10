@@ -30,7 +30,7 @@ def process_file(input_file, output_file, media_dir):
     def filter_transcript_files(filename):
         pair = os.path.splitext(filename)
         ext = pair[1].lower()
-        return ext in ['.ods', '.pdf']
+        return ext in ['.ods', '.pdf', '.csv']
 
 
     media_files = list(filter(filter_media_files, list(files)))

@@ -12,7 +12,7 @@ def filter_media_files(filename):
 
 def filter_transcript_files(filename):
     ext = get_file_extension(filename)
-    return ext in ['.ods', '.pdf']
+    return ext in ['.ods', '.pdf', '.csv']
 
 def filter_blacklisted_files(filename):
     ext = get_file_extension(filename)
