@@ -1,8 +1,12 @@
 import xml.etree.ElementTree as ET
-from files import filename_to_ext
+from pathlib import Path
 import os
 
 ns = '{http://www.clarin.eu/cmd/}'
+
+
+def filename_to_ext(name):
+    return Path(name).suffix
 
 
 def get_mimetype(filename):
