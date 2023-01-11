@@ -40,7 +40,11 @@ def process_dir(input_dir, output_dir, media_dir):
 
 
 
-parser = ArgumentParser()
+parser = ArgumentParser(
+    prog = 'lta',
+    description = 'OHD long term archiving tool',
+    epilog = 'Good luck'
+)
 parser.add_argument('-i', '--inputdir', required=True, type=pathlib.Path,
     help='path of input directory')
 parser.add_argument('-o', '--outputdir', required=True, type=pathlib.Path,
