@@ -7,7 +7,15 @@ name = "lta"
 version = "0.0.1"
 description = "OHD long term archiving tool"
 readme = "README.md"
-authors = [{ name = "Marc Altmann", email = "marc.altmann@cedis.fu-berlin.de" }]
+authors = [
+    { name = "Marc Altmann", email = "marc.altmann@cedis.fu-berlin.de" }
+]
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 
 [project.scripts]
 lta = "lta.__main__:main"
