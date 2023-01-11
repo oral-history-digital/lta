@@ -40,9 +40,11 @@ def process_dir(input_dir, output_dir, media_dir):
 
 
 
+version = '0.0.1'
+
 parser = ArgumentParser(
     prog = 'lta',
-    description = 'OHD long term archiving tool',
+    description = f"OHD long term archiving tool {version}",
     epilog = 'Good luck'
 )
 parser.add_argument('-i', '--inputdir', required=True, type=pathlib.Path,
@@ -51,8 +53,11 @@ parser.add_argument('-o', '--outputdir', required=True, type=pathlib.Path,
     help='path of output directory')
 parser.add_argument('-m', '--mediadir', required=True, type=pathlib.Path,
     help='directory of media files')
-parser.add_argument('-v', '--version', action='version',
-    version='%(prog)s 0.1')
+
+group = parser.add_mutually_exclusive_group(required=True)
+
+group.add_argument("-v", "--verbose", action="store_true")
+group.add_argument("-s", "--silent", action="store_true")
 
 args = parser.parse_args()
 
