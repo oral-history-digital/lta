@@ -2,28 +2,6 @@ import os
 import json
 import requests
 import subprocess
-from argparse import ArgumentParser
-
-dir_name = 'cmdis'
-
-parser = ArgumentParser()
-parser.add_argument('-l', '--local', action='store_true',
-    help='use local server', default=False)
-parser.add_argument('-b', '--batch', help='archiving batch number',
-    type=int, default=1)
-parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1')
-
-args = parser.parse_args()
-
-is_local = args.local
-batch_number = args.batch
-
-if (is_local):
-    host = 'http://www.example.com:3000'
-else:
-    host = 'https://deutsches-gedaechtnis.fernuni-hagen.de'
-
-print(f'Fetching data from host {host}')
 
 def create_output_directory(name):
     if not os.path.exists(f'./{name}'):
@@ -37,8 +15,8 @@ def fetch_ids():
     return data
 
 
-def fetch_archive_metadata():
-    url = f'{host}/de/project/cmdi_metadata.xml?batch={batch_number}'
+def fetch_archive_metadata(domain, batch_number, dir_name):
+    url = f'{domain}/de/project/cmdi_metadata.xml?batch={batch_number}'
     r = requests.get(url, allow_redirects=True)
     f = open(f'./{dir_name}/ohd_adg_{batch_number:03}.xml', 'wb')
     f.write(r.content)
@@ -49,13 +27,15 @@ def fetch_archive_metadata():
     cp = subprocess.run([
         'xmllint',
         '--schema',
-        'media-corpus-profile.xsd',
+        '../../media-corpus-profile.xsd',
         f'./{dir_name}/ohd_adg_{batch_number:03}.xml',
         '--noout'
     ], capture_output=True)
 
     if cp.returncode == 0:
         print(f'{dir_name}/ohd_adg_{batch_number:03}.xml validated…')
+    else:
+        print('not validated')
 
 
 def fetch_interview_metadata(id):
@@ -85,9 +65,10 @@ def fetch_interview_metadata(id):
         print(f'{dir_name}/{id}/{id}.xml validated…')
 
 
-create_output_directory(dir_name)
-fetch_archive_metadata()
+def fetch(domain, batch, target_dir):
+    create_output_directory(target_dir)
+    fetch_archive_metadata(domain, batch, target_dir)
 
-ids = fetch_ids()
-for id in ids:
-    fetch_interview_metadata(id)
+    #ids = fetch_ids()
+    #for id in ids:
+    #    fetch_interview_metadata(id)

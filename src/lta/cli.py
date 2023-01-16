@@ -4,7 +4,7 @@ from __future__ import print_function
 import click
 #import lta.config
 from contextlib import contextmanager
-#from lta.api import Task
+from api import Archive, download_metadata
 
 
 # The main entry point for lta.
@@ -17,13 +17,12 @@ def lta_cli():
 @lta_cli.command(help="download metadata")
 @click.argument('domain')
 @click.argument('batch')
-def download(domain, batch):
+@click.argument('dest')
+def download(domain, batch, dest):
     """Download metadata."""
     print(domain, batch)
 
-    with _lta_db():
-        print('to be implemented')
-        #lta.add(Task(summary, owner))
+    download_metadata(Archive(domain, batch), dest)
 
 
 @contextmanager
