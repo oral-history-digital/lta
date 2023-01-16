@@ -16,13 +16,12 @@ def lta_cli():
 
 @lta_cli.command(help="download metadata")
 @click.argument('domain')
+@click.argument('name')
 @click.argument('batch')
 @click.argument('dest')
-def download(domain, batch, dest):
+def download(domain, name, batch, dest):
     """Download metadata."""
-    print(domain, batch)
-
-    download_metadata(Archive(domain, batch), dest)
+    download_metadata(Archive(domain, name, int(batch)), dest)
 
 
 @contextmanager

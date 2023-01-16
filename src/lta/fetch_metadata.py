@@ -3,9 +3,10 @@ import json
 import requests
 import subprocess
 
-def create_output_directory(name):
-    if not os.path.exists(f'./{name}'):
-        os.mkdir(f'./{name}')
+def create_output_directory(path):
+    combined_path = os.path.join('.', path)
+    if not os.path.exists(combined_path):
+        os.mkdir(combined_path)
 
 
 def fetch_ids():
@@ -15,25 +16,26 @@ def fetch_ids():
     return data
 
 
-def fetch_archive_metadata(domain, batch_number, dir_name):
+def fetch_archive_metadata(domain, archive_name, batch_number, dir_name):
     url = f'{domain}/de/project/cmdi_metadata.xml?batch={batch_number}'
     r = requests.get(url, allow_redirects=True)
-    f = open(f'./{dir_name}/ohd_adg_{batch_number:03}.xml', 'wb')
+    path = os.path.join('.', dir_name, f'ohd_{archive_name}_{batch_number:03}.xml')
+    f = open(path, 'wb')
     f.write(r.content)
     f.close()
-    print(f'{dir_name}/ohd_adg_{batch_number:03}.xml fetched…')
+    print(f'{path} fetched…')
 
     # Check integrity.
     cp = subprocess.run([
         'xmllint',
         '--schema',
         '../../media-corpus-profile.xsd',
-        f'./{dir_name}/ohd_adg_{batch_number:03}.xml',
+        path,
         '--noout'
     ], capture_output=True)
 
     if cp.returncode == 0:
-        print(f'{dir_name}/ohd_adg_{batch_number:03}.xml validated…')
+        print(f'{path} validated…')
     else:
         print('not validated')
 
@@ -65,9 +67,9 @@ def fetch_interview_metadata(id):
         print(f'{dir_name}/{id}/{id}.xml validated…')
 
 
-def fetch(domain, batch, target_dir):
+def fetch(domain, archive_name, batch, target_dir):
     create_output_directory(target_dir)
-    fetch_archive_metadata(domain, batch, target_dir)
+    fetch_archive_metadata(domain, archive_name, batch, target_dir)
 
     #ids = fetch_ids()
     #for id in ids:
