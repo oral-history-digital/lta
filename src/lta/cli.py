@@ -1,10 +1,16 @@
 """Command Line Interface (CLI) for lta project."""
 
 from __future__ import print_function
+import sys
 import click
 #import lta.config
 from contextlib import contextmanager
-from api import Archive, download_metadata
+from api import Archive, fetch_metadata
+
+from config import get_config
+
+class LtaException(Exception):
+    """An lta error has occurred."""
 
 
 # The main entry point for lta.
@@ -14,14 +20,20 @@ def lta_cli():
     """Run the lta application."""
 
 
-@lta_cli.command(help="download metadata")
-@click.argument('domain')
+@lta_cli.command(help="fetch metadata from archive")
 @click.argument('name')
-@click.argument('batch')
-@click.argument('dest')
-def download(domain, name, batch, dest):
-    """Download metadata."""
-    download_metadata(Archive(domain, name, int(batch)), dest)
+@click.option('-b', '--batch', default=1, help='batch number')
+def fetch(name, batch):
+    """Fetch metadata."""
+    try:
+        app_config = get_config(name)
+    except Exception:
+        sys.exit(f'No configuration for {name} archive found.')
+
+    print(app_config)
+
+    fetch_metadata(Archive(app_config.domain, name, int(batch)),
+        app_config.temp_path)
 
 
 @contextmanager
