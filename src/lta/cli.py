@@ -7,7 +7,7 @@ import click
 from contextlib import contextmanager
 from api import Archive, fetch_metadata
 
-from config import get_config
+from config import get_config, list_config
 
 class LtaException(Exception):
     """An lta error has occurred."""
@@ -28,12 +28,22 @@ def fetch(name, batch):
     try:
         app_config = get_config(name)
     except Exception:
-        sys.exit(f'No configuration for {name} archive found.')
+        sys.exit(f'No configuration for {name} archive found. Try "list" command.')
 
     print(app_config)
 
     fetch_metadata(Archive(app_config.domain, name, int(batch)),
         app_config.temp_path)
+
+
+@lta_cli.command(help="list configured archives")
+def list():
+    """List configured archives."""
+    try:
+        sections = list_config()
+        print(*sections)
+    except Exception:
+        sys.exit(f'No configuration file found.')
 
 
 @contextmanager

@@ -1,10 +1,7 @@
 """Handle configuration files for lta CLI."""
 
 from collections import namedtuple
-try:
-    from configparser import ConfigParser
-except ImportError:
-    from ConfigParser import ConfigParser
+from configparser import ConfigParser
 
 import os
 
@@ -33,3 +30,11 @@ def get_config(archive_name):
     media_path = os.path.expanduser(media_path)
     temp_path = os.path.expanduser(temp_path)
     return ApplicationConfig(domain, media_path, temp_path)
+
+
+def list_config():
+    """Return list of config sections after reading config file."""
+    parser = ConfigParser()
+    config_file = os.path.expanduser('~/.lta.config')
+    parser.read(config_file)
+    return parser.sections()

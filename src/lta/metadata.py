@@ -1,12 +1,7 @@
 import os
 import json
 import requests
-import subprocess
-
-def create_output_directory(path):
-    combined_path = os.path.join('.', path)
-    if not os.path.exists(combined_path):
-        os.mkdir(combined_path)
+from files import create_output_directory, validate_xml
 
 
 def fetch_ids():
@@ -25,19 +20,11 @@ def fetch_archive_metadata(domain, archive_name, batch_number, dir_name):
     f.close()
     print(f'{path} fetched…')
 
-    # Check integrity.
-    cp = subprocess.run([
-        'xmllint',
-        '--schema',
-        '../../media-corpus-profile.xsd',
-        path,
-        '--noout'
-    ], capture_output=True)
-
-    if cp.returncode == 0:
+    result = validate_xml(path, 'media-corpus-profile.xsd')
+    if result == 0:
         print(f'{path} validated…')
     else:
-        print('not validated')
+        print(result)
 
 
 def fetch_interview_metadata(id):
@@ -52,19 +39,15 @@ def fetch_interview_metadata(id):
     f.write(r.content)
     f.close()
 
-    print(f'{dir_name}/{id}/{id}.xml fetched…')
+    path = f'{dir_name}/{id}/{id}.xml'
 
-    # Check integrity.
-    cp = subprocess.run([
-        'xmllint',
-        '--schema',
-        'media-session-profile.xsd',
-        f'{dir_name}/{id}/{id}.xml',
-        '--noout'
-    ], capture_output=True)
+    print(f'{path} fetched…')
 
-    if cp.returncode == 0:
-        print(f'{dir_name}/{id}/{id}.xml validated…')
+    result = validate_xml(path, 'media-session-profile.xsd')
+    if result == 0:
+        print(f'{path} validated…')
+    else:
+        print(result)
 
 
 def fetch(domain, archive_name, batch, target_dir):
