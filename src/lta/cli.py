@@ -3,11 +3,10 @@
 from __future__ import print_function
 import sys
 import click
-#import lta.config
 from contextlib import contextmanager
-from api import Archive, fetch_metadata
 
-from config import get_config, list_config
+from lta.api import Archive, fetch_metadata
+from lta.config import get_config, list_config
 
 class LtaException(Exception):
     """An lta error has occurred."""
@@ -17,7 +16,7 @@ class LtaException(Exception):
 @click.group(context_settings={'help_option_names': ['-h', '--help']})
 @click.version_option(version='0.1.0')
 def lta_cli():
-    """Run the lta application."""
+    """OHD long term archiving tool"""
 
 
 @lta_cli.command(help="fetch metadata from archive")

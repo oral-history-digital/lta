@@ -1,5 +1,23 @@
-# LTA
-## OHD long term archiving tool.
+# lta
+
+LTA is the long term archiving tool for the
+Oral History.Digital project of Freie Universität Berlin.
+
+## Building the command line tool
+
+Clone this repository. Enter the project directory, and type:
+
+```
+pip install .
+```
+
+You can now execute the tool like this:
+
+```
+lta --help
+lta list
+lta fetch cdoh --batch=1
+```
 
 ## Configuration
 

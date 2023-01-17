@@ -1,7 +1,7 @@
 """Main API for lta project."""
 
 from collections import namedtuple
-from metadata import fetch
+from lta.metadata import fetch
 
 # Archive element types : [summary: str, owner: str, done: bool, id: int]
 Archive = namedtuple('Archive', ['domain', 'name', 'batch', 'media_dir', 'id'])
