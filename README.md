@@ -7,13 +7,13 @@ Oral History.Digital project of Freie Universität Berlin.
 
 Clone this repository. Enter the project directory, and type:
 
-```
+```bash
 pip install .
 ```
 
 You can now execute the tool like this:
 
-```
+```bash
 lta --help
 lta list
 lta fetch cdoh --batch=1
@@ -24,7 +24,7 @@ lta fetch cdoh --batch=1
 Your configuration file must be in your user directory, named `~/.lta.config`
 and look like this:
 
-```
+```ini
 [DEFAULT]
 TempPath=~/work/lta_tmp
 
