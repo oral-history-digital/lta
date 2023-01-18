@@ -1,0 +1,2 @@
+include src/lta/media-corpus-profile.xsd
+include src/lta/media-session-profile.xsd
