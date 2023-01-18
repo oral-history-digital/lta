@@ -29,8 +29,6 @@ def fetch(name, batch):
     except Exception:
         sys.exit(f'No configuration for {name} archive found. Try "list" command.')
 
-    print(app_config)
-
     fetch_metadata(Archive(app_config.domain, name, int(batch)),
         app_config.temp_path)
 
