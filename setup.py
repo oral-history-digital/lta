@@ -16,7 +16,7 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
 
-    install_requires=['click==8.1.3', 'tinydb==3.15.1', 'six'],
+    install_requires=['click==8.1.3', 'requests==2.28.2', 'xmlschema==2.1.1'],
 
     entry_points={
         'console_scripts': [

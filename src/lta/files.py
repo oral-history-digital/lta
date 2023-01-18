@@ -1,5 +1,6 @@
 import os
 import subprocess
+import xmlschema
 
 def create_output_directory(path):
     combined_path = os.path.join('.', path)
@@ -9,16 +10,9 @@ def create_output_directory(path):
 
 def validate_xml(path, schema):
     schema_path = os.path.join(os.path.dirname(__file__), schema)
+    schema = xmlschema.XMLSchema(schema_path)
 
-    cp = subprocess.run([
-        'xmllint',
-        '--schema',
-        schema_path,
-        path,
-        '--noout'
-    ], capture_output=True)
-
-    if cp.returncode == 0:
+    if schema.is_valid(path):
         return 0
     else:
-        return cp.stderr.decode('utf8')
+        return 1

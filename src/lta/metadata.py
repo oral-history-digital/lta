@@ -25,7 +25,7 @@ def fetch_archive_metadata(domain, archive_name, batch_number, dir_name):
     if result == 0:
         print(f'{path} validated…')
     else:
-        print(result)
+        print(f'{path} is not valid!')
 
 
 def fetch_interview_metadata(id):
