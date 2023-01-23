@@ -4,8 +4,6 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "lta"
-version = "0.1.0"
-description = "OHD long term archiving tool"
 license = {file = "LICENSE"}
 authors = [{name = "Marc Altmann", email = "marc.altmann@cedis.fu-berlin.de"}]
 classifiers = [
