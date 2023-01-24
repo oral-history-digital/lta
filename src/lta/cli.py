@@ -66,8 +66,10 @@ def checksums(algorithm):
     """Create checksums in media directory."""
     print(algorithm)
 
-    digest = create_checksums('test_video.mp4', algorithm)
-    print(digest)
+    path = '/path/to/files'
+
+    create_checksums(path, algorithm)
+
 
 
 if __name__ == '__main__':

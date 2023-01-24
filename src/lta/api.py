@@ -1,8 +1,8 @@
 """Main API for lta project."""
 
 from collections import namedtuple
-import hashlib
 
+import lta.files
 from lta.metadata import fetch
 
 # Archive element types : [summary: str, owner: str, done: bool, id: int]
@@ -22,25 +22,7 @@ def fetch_metadata(archive, target_dir):  # type: (Archive, string) -> None
 def create_checksums(dir, algorithm):
     """Recursively create checksums in directory with the specified algorithm."""
 
-    # TODO: In the end two functions: for single file and for directory.
-
-    if algorithm == 'MD5':
-        hash_method = hashlib.md5
-    elif algorithm == 'SHA1':
-        hash_method = hashlib.sha1
-    elif algorithm == 'SHA256':
-        hash_method = hashlib.sha256
-    else:
-        raise TypeError('algorithm must be one of MD5, SHA1, SHA256')
-
-    hash = hash_method()
-
-    with open(dir, 'rb') as f:
-        for chunk in iter(lambda: f.read(4096), b""):
-            hash.update(chunk)
-
-    digest = hash.hexdigest()
-    return digest
+    lta.files.create_checksums(dir, algorithm)
 
 
 if __name__ == '__main__':
