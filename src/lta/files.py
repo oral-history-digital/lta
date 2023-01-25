@@ -31,7 +31,16 @@ def file_checksum(file, hash_method):
     return digest
 
 
-def create_checksums(dir, algorithm, ext_blacklist = ['', '.md5', '.sha1', '.sha256']):
+def write_checksum(file, checksum, dry_run = True):
+    if dry_run:
+        print(f'[DRYRUN] Writing checksum file {file}')
+    else:
+        with open(file, 'w') as f:
+            f.write(checksum + '\n')
+
+
+def create_checksums(dir, algorithm, ext_blacklist = ['', '.md5', '.sha1', '.sha256'],
+    dry_run = True):
     """Recursively create checksums in directory with the specified algorithm."""
 
     if algorithm == 'MD5':
@@ -61,7 +70,4 @@ def create_checksums(dir, algorithm, ext_blacklist = ['', '.md5', '.sha1', '.sha
 
         if is_file and not is_blacklisted:
             checksum = file_checksum(filepath, hash_method)
-
-            checksum_path = filepath + hash_extension
-            with open(checksum_path, 'w') as f:
-                f.write(checksum + '\n')
+            write_checksum(filepath + hash_extension, checksum, dry_run)

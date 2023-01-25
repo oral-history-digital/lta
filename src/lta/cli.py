@@ -29,46 +29,24 @@ def list():
         sys.exit(f'No configuration file found.')
 
 
-@lta_cli.command(help="fetch metadata from archive")
-@click.argument('name')
+@lta_cli.command(help="fetch and process archive metadata")
+@click.argument('archive')
 @click.option('-b', '--batch', default=1, help='batch number')
-def fetch(name, batch):
-    """Fetch metadata."""
+@click.option('--fetch-only', is_flag=True, help='just fetch metadata files to temp dir')
+@click.option('--dry-run', is_flag=True, help='do not create any files')
+@click.option('--checksums/--no-checksums', default=False, help='create checksums')
+@click.option('--type', type=click.Choice(['MD5', 'SHA1', 'SHA256'], case_sensitive=False),
+    default='SHA256', show_default=True, help='hash type for checksum generation')
+def archive(archive, batch, fetch_only, dry_run, checksums, type):
+    """Fetch and process archive metadata."""
     try:
-        app_config = get_config(name)
-    except Exception:
-        sys.exit(f'No configuration for {name} archive found. Try "list" command.')
+        app_config = get_config(archive)
+    except Exception as inst:
+        sys.exit(inst.args[0])
+        #sys.exit(f'No configuration for {archive} archive found. Try "list" command.')
 
-    fetch_metadata(Archive(app_config.domain, name, int(batch)),
+    fetch_metadata(Archive(app_config.domain, archive, int(batch)),
         app_config.temp_path)
-
-
-@lta_cli.command(help="process metadata")
-def process():
-    """Process metadata."""
-
-
-@lta_cli.command(help="copy metadata to server")
-def copy():
-    """Copy metadata."""
-
-
-
-@lta_cli.command(help="do all steps of the process at once")
-def all():
-    """Do all steps of the process at once."""
-
-
-@lta_cli.command(help="create checksums")
-@click.option('-a', '--algorithm', type=click.Choice(['MD5', 'SHA1', 'SHA256'], case_sensitive=False),
-    default='SHA256', show_default=True, help='algorithm for checksum generation')
-def checksums(algorithm):
-    """Create checksums in media directory."""
-    print(algorithm)
-
-    path = '/path/to/files'
-
-    create_checksums(path, algorithm)
 
 
 

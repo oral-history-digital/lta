@@ -2,7 +2,6 @@
 
 from collections import namedtuple
 from configparser import ConfigParser
-
 import os
 
 class NoConfig(Exception):
@@ -25,10 +24,17 @@ def get_config(archive_name):
             media_path = parser.get(archive_name, 'MediaPath')
             temp_path = parser.get(archive_name, 'TempPath')
         except Exception:
-            raise NoConfig(archive_name)
+            raise NoConfig(f'Configuration error: no config for archive {archive_name} found. Configured archives are: {", ".join(parser.sections())}')
 
     media_path = os.path.expanduser(media_path)
     temp_path = os.path.expanduser(temp_path)
+
+    if not os.path.exists(temp_path):
+        raise FileNotFoundError(f'Configuration error: temp dir {temp_path} does not exist')
+
+    if not os.path.isdir(temp_path):
+        raise NotADirectoryError(f'Configuration error: file {temp_path} is not a directory')
+
     return ApplicationConfig(domain, media_path, temp_path)
 
 

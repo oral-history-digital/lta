@@ -9,7 +9,7 @@ from lta.metadata import fetch
 Archive = namedtuple('Archive', ['domain', 'name', 'batch', 'media_dir', 'id'])
 Archive.__new__.__defaults__ = ('http://localhost:3000', 'cdoh', 1, None, None)
 
-def fetch_metadata(archive, target_dir):  # type: (Archive, string) -> None
+def fetch_metadata(archive, target_dir):
     """Download metadata to target directory."""
     if not isinstance(archive, Archive):
         raise TypeError('archive must be Archive object')
