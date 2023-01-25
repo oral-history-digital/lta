@@ -1,6 +1,5 @@
 import xml.etree.ElementTree as ET
 from pathlib import Path
-import os
 
 ns = '{http://www.clarin.eu/cmd/}'
 

@@ -1,9 +1,6 @@
 import os
-import json
 import subprocess
-import requests
 import pathlib
-import tempfile
 from argparse import ArgumentParser
 import xml.etree.ElementTree as ET
 from media_files import check_directory_integrity

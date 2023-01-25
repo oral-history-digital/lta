@@ -1,7 +1,8 @@
 import os
 import requests
 
-from lta.files import validate_xml, create_directory_if_not_exists
+from lta.files import create_directory_if_not_exists
+from lta.xml_validation import is_valid_corpus_cmdi, is_valid_session_cmdi
 
 
 def fetch_corpus_metadata(archive_name, archive_domain, batch_number, dir_name):
@@ -14,8 +15,7 @@ def fetch_corpus_metadata(archive_name, archive_domain, batch_number, dir_name):
     with open(file_path, 'wb') as f:
         f.write(response.content)
 
-    result = validate_xml(file_path, 'media-corpus-profile.xsd')
-    if result == 0:
+    if is_valid_corpus_cmdi(file_path):
         return True
     else:
         raise ValueError(f'{file_path} is not valid a valid corpus cmdi file')
@@ -44,8 +44,7 @@ def fetch_session_metadata(domain, batch_number, interview_id, dir_name):
     with open(file_path, 'wb') as f:
         f.write(response.content)
 
-    result = validate_xml(file_path, 'media-session-profile.xsd')
-    if result == 0:
+    if is_valid_session_cmdi(file_path):
         return True
     else:
         raise ValueError(f'{file_path} is not valid a valid session cmdi file')

@@ -1,20 +1,9 @@
 import os
-import xmlschema
 import hashlib
 
 def create_directory_if_not_exists(path):
     if not os.path.exists(path):
         os.mkdir(path)
-
-
-def validate_xml(path, schema):
-    schema_path = os.path.join(os.path.dirname(__file__), schema)
-    schema = xmlschema.XMLSchema(schema_path)
-
-    if schema.is_valid(path):
-        return 0
-    else:
-        return 1
 
 
 def file_checksum(file, hash_method):

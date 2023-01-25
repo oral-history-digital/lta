@@ -44,8 +44,9 @@ def archive(archive, batch, fetch_only, skip_fetch, dry_run, checksums, type):
     except Exception as inst:
         sys.exit(inst.args[0])
 
-    process_archive(Archive(app_config.domain, archive, int(batch)),
-        app_config.temp_path)
+    arch = Archive(app_config.domain, archive, int(batch))
+
+    process_archive(arch, app_config.temp_path)
 
 
 
