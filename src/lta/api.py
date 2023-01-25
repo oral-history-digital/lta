@@ -1,6 +1,7 @@
 """Main API for lta project."""
 
 from collections import namedtuple
+import os
 
 import lta.files
 from lta.network import fetch_corpus_metadata, fetch_interview_ids, fetch_session_metadata
@@ -12,22 +13,34 @@ Archive = namedtuple('Archive', ['domain', 'name', 'batch', 'media_dir', 'id'])
 Archive.__new__.__defaults__ = ('http://localhost:3000', 'cdoh', 1, None, None)
 
 
-def process_archive(archive, temp_dir, dry_run = True):
+def process_archive(archive, temp_dir, media_dir, fetch_only, skip_fetch,
+    output_dir, dry_run = True):
     """The whole archive process."""
+
 
     if not isinstance(archive, Archive):
         raise TypeError('archive must be Archive object')
     if not isinstance(temp_dir, str):
         raise TypeError('temp_dir must be string')
 
+    if not os.path.exists(media_dir):
+        raise FileNotFoundError(f'Configuration error: media dir {media_dir} does not exist')
+
+    if not os.path.isdir(media_dir):
+        raise NotADirectoryError(f'Configuration error: media dir {media_dir} is not a directory')
+
 
     lta.files.create_directory_if_not_exists(temp_dir)
 
-    fetch_cmdi_metadata(archive, temp_dir)
+    if not skip_fetch:
+        fetch_cmdi_metadata(archive, temp_dir)
 
-    #copy_corpus_cmdi(...)
+    if fetch_only:
+        return
 
-    #process_session_cmdi_dir(...)
+    copy_corpus_cmdi(temp_dir, output_dir, dry_run)
+
+    process_session_cmdi_dir(temp_dir, output_dir, media_dir, dry_run)
 
     # Create checksums?
 

@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import os
 
 def mimetype_from_filename(filename):
     """Returns a standard mimetype according to the filename's extension."""
@@ -11,13 +11,28 @@ def mimetype_from_filename(filename):
         '.avi': 'video/x-msvideo',
         '.pdf': 'application/pdf',
         '.ods': 'application/vnd.oasis.opendocument.spreadsheet',
-        '.csv': 'text/csv'
+        '.csv': 'text/plain'
     }
 
     if extension in extension_to_mimetype:
         return extension_to_mimetype[extension]
     else:
         raise TypeError(f'cannot determine mimetype for {filename}')
+
+
+def is_media_file(filename):
+    """Returns True is filename is a media file according to its extension."""
+    pair = os.path.splitext(filename)
+    ext = pair[1].lower()
+    return ext in ['.m2ts', '.mp4', '.avi']
+
+
+def is_transcript_file(filename):
+    """Returns True if filename is a transcript file according to its extension."""
+    pair = os.path.splitext(filename)
+    ext = pair[1].lower()
+    return ext in ['.ods', '.pdf', '.csv']
+
 
 
 # TODO: Probably not used any longer.
