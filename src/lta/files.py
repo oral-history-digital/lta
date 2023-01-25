@@ -2,10 +2,9 @@ import os
 import xmlschema
 import hashlib
 
-def create_output_directory(path):
-    combined_path = os.path.join('.', path)
-    if not os.path.exists(combined_path):
-        os.mkdir(combined_path)
+def create_directory_if_not_exists(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
 
 
 def validate_xml(path, schema):

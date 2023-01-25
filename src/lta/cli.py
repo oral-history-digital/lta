@@ -3,9 +3,8 @@
 from __future__ import print_function
 import sys
 import click
-from contextlib import contextmanager
 
-from lta.api import Archive, fetch_metadata, create_checksums
+from lta.api import Archive, process_archive
 from lta.config import get_config, list_config
 
 class LtaException(Exception):
@@ -33,19 +32,19 @@ def list():
 @click.argument('archive')
 @click.option('-b', '--batch', default=1, help='batch number')
 @click.option('--fetch-only', is_flag=True, help='just fetch metadata files to temp dir')
+@click.option('--skip-fetch', is_flag=True, help='do not fetch metadata, use temp dir instead')
 @click.option('--dry-run', is_flag=True, help='do not create any files')
 @click.option('--checksums/--no-checksums', default=False, help='create checksums')
 @click.option('--type', type=click.Choice(['MD5', 'SHA1', 'SHA256'], case_sensitive=False),
     default='SHA256', show_default=True, help='hash type for checksum generation')
-def archive(archive, batch, fetch_only, dry_run, checksums, type):
+def archive(archive, batch, fetch_only, skip_fetch, dry_run, checksums, type):
     """Fetch and process archive metadata."""
     try:
         app_config = get_config(archive)
     except Exception as inst:
         sys.exit(inst.args[0])
-        #sys.exit(f'No configuration for {archive} archive found. Try "list" command.')
 
-    fetch_metadata(Archive(app_config.domain, archive, int(batch)),
+    process_archive(Archive(app_config.domain, archive, int(batch)),
         app_config.temp_path)
 
 
