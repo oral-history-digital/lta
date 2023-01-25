@@ -30,13 +30,15 @@ def list():
 
 @lta_cli.command(help="fetch and process archive metadata")
 @click.argument('archive')
-@click.option('-b', '--batch', default=1, help='batch number')
-@click.option('--fetch-only', is_flag=True, help='just fetch metadata files to temp dir')
-@click.option('--skip-fetch', is_flag=True, help='do not fetch metadata, use temp dir instead')
-@click.option('--output-dir', required=False, type=str, help='use output directory other than media directory')
-@click.option('--dry-run', is_flag=True, help='do not create any files')
-@click.option('--checksums/--no-checksums', default=False, help='create checksums')
-@click.option('--type', type=click.Choice(['MD5', 'SHA1', 'SHA256'], case_sensitive=False),
+@click.option('-b', '--batch', default=1, show_default=True, help='batch number')
+@click.option('-f', '--fetch-only', is_flag=True, help='just fetch metadata files to temp dir')
+@click.option('-s', '--skip-fetch', is_flag=True, help='do not fetch metadata, use temp dir instead')
+@click.option('-o', '--output-dir', required=False, type=click.Path(exists=True, file_okay=False,
+    dir_okay=True, writable=True, resolve_path=True),
+    help='use output directory other than media directory')
+@click.option('-d', '--dry-run', is_flag=True, help='do not create any files')
+@click.option('-c', '--checksums', is_flag=True, help='create checksums')
+@click.option('-t', '--type', type=click.Choice(['MD5', 'SHA1', 'SHA256'], case_sensitive=False),
     default='SHA256', show_default=True, help='hash type for checksum generation')
 def archive(archive, batch, fetch_only, skip_fetch, output_dir, dry_run, checksums, type):
     """Fetch and process archive metadata."""
