@@ -1,7 +1,9 @@
 import os
 import hashlib
 
+
 def create_directory_if_not_exists(path):
+    """Check if directory exists and create it otherwise."""
     if not os.path.exists(path):
         os.mkdir(path)
 

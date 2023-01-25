@@ -4,6 +4,8 @@ from collections import namedtuple
 
 import lta.files
 from lta.network import fetch_corpus_metadata, fetch_interview_ids, fetch_session_metadata
+from lta.cmdi_processes import copy_corpus_cmdi, process_session_cmdi_dir
+
 
 # Archive element types : [summary: str, owner: str, done: bool, id: int]
 Archive = namedtuple('Archive', ['domain', 'name', 'batch', 'media_dir', 'id'])
@@ -23,10 +25,11 @@ def process_archive(archive, temp_dir, dry_run = True):
 
     fetch_cmdi_metadata(archive, temp_dir)
 
-    # 2. Do some checks on the media files.
-    # 3. Process metadata
-    # 4. Write metadata files to media directory or custom directory.
-    # 5. Create checksums.
+    #copy_corpus_cmdi(...)
+
+    #process_session_cmdi_dir(...)
+
+    # Create checksums?
 
 
 def fetch_cmdi_metadata(archive, temp_dir):

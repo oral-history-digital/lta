@@ -1,15 +1,19 @@
 import os
 import subprocess
-import pathlib
-from argparse import ArgumentParser
+import shutil
 import xml.etree.ElementTree as ET
 from media_files import check_directory_integrity
-import interview_cmdi as cmdi
+
+import lta.session_cmdi as cmdi
+from lta.files import create_directory_if_not_exists
+
 
 ET.register_namespace('', 'http://www.clarin.eu/cmd/')
 
 
-def process_file(input_file, output_file, media_dir):
+def process_session_cmdi(input_file, output_file, media_dir):
+    """Check media files and enricht original session cmdi with media data."""
+
     print(f'Processing file {input_file}...')
     # Directory scanning.
 
@@ -84,36 +88,38 @@ def process_file(input_file, output_file, media_dir):
     else:
         print('Not validated', cp2.stderr)
 
-
     # Save it.
     with open(output_file, 'wb') as binary_file:
         binary_file.write(prettified_output)
         print('Saved…')
 
 
+def copy_corpus_cmdi(input_dir, output_dir):
+    """Find the corpus cmdi file in input_dir and copy it to output_dir."""
+
+    files = os.listdir(input_dir)
+
+    for file in files:
+        filepath = os.path.join(input_dir, file)
+
+        if os.path.isfile(filepath):  # corpus cmdi file
+            shutil.copy(filepath, output_dir)
 
 
+def process_session_cmdi_dir(input_dir, output_dir, media_dir):
+    """Find each session cmdi and call process function on it."""
 
+    files = os.listdir(input_dir)
 
+    for file in files:
+        filepath = os.path.join(input_dir, file)
 
+        if os.path.isdir(filepath):  # directory with session cmdi.
+            input_session_cmdi = os.path.join(input_dir, file, f'{file}.xml')
+            interview_output_dir = os.path.join(output_dir, file)
+            output_session_cmdi = os.path.join(output_dir, file, f'{file}.xml')
+            interview_media_dir = os.path.join(media_dir, file)
 
-parser = ArgumentParser()
-parser.add_argument('-i', '--inputfile', required=True, type=pathlib.Path,
-    help='original cmdi xml metadata file')
-# TODO: Use STDOUT instead or optionally.
-parser.add_argument('-o', '--outputfile', required=True, type=pathlib.Path,
-    help='path of output file')
-parser.add_argument('-m', '--mediadir', required=True, type=pathlib.Path,
-    help='directory of media files')
-parser.add_argument('-v', '--version', action='version',
-    version='%(prog)s 0.1')
+            create_directory_if_not_exists(interview_output_dir)
 
-args = parser.parse_args()
-
-input_file = args.inputfile
-output_file = args.outputfile
-media_dir = args.mediadir
-
-print(input_file, output_file, media_dir)
-
-process_file(input_file, output_file, media_dir)
+            process_session_cmdi(input_session_cmdi, output_session_cmdi, interview_media_dir)
