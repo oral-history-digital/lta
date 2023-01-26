@@ -156,19 +156,19 @@ With the above options, you could use one of several workflows that work best
 for you, e.g.
 
 ```console
-$ lta archive cdoh 1 --fetch-only
+$ lta archive cdoh --batch=2 --fetch-only
 ```
 
 to fetch the metadata. Then do a dry run:
 
 ```console
-$ lta archive cdoh 1 --skip-fetch --dry-run
+$ lta archive cdoh --batch=2 --dry-run
 ```
 
 and if everything seems okay do the real run:
 
 ```console
-$ lta archive cdoh 1 --skip-fetch
+$ lta archive cdoh --batch=2 --skip-fetch
 ```
 
 Instead of doing a dry-run, you could also write to a different output directory
