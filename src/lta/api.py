@@ -4,8 +4,16 @@ from collections import namedtuple
 import os
 
 import lta.files
-from lta.network import fetch_corpus_metadata, fetch_interview_ids, fetch_session_metadata
-from lta.cmdi_processes import copy_corpus_cmdi, process_session_cmdi_dir
+from lta.network import (
+    fetch_corpus_metadata,
+    fetch_interview_ids,
+    fetch_session_metadata,
+    fetch_archiving_batches
+)
+from lta.cmdi_processes import (
+    copy_corpus_cmdi,
+    process_session_cmdi_dir
+)
 
 
 # Archive element types : [summary: str, owner: str, done: bool, id: int]
@@ -57,6 +65,10 @@ def fetch_cmdi_metadata(archive, temp_dir):
         fetch_session_metadata(archive.domain, archive.batch, id, temp_dir)
         print(f'Fetched {id} session cmdi...')
 
+
+def list_batches(domain):
+    """Get a list of the archiving batches for the given domain."""
+    return fetch_archiving_batches(domain)
 
 
 def create_checksums(dir, algorithm):

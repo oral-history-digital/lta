@@ -19,13 +19,22 @@ def fetch_corpus_metadata(archive_name, archive_domain, batch_number, dir_name):
     return True
 
 
+def fetch_archiving_batches(domain):
+    """Fetches archiving batches for the given domain."""
+
+    url = f'{domain}/de/project/archiving_batches.json'
+    response = requests.get(url, allow_redirects=True)
+    data = response.json()
+    return data
+
+
 def fetch_interview_ids(domain, batch_number):
     """Fetches interview ids of the given domain and batch"""
 
     url = f'{domain}/de/project/archiving_batches/{batch_number}.json'
     response = requests.get(url, allow_redirects=True)
     data = response.json()
-    return data
+    return data['interview_ids']
 
 
 def fetch_session_metadata(domain, batch_number, interview_id, dir_name):

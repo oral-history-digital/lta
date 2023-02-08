@@ -4,8 +4,9 @@ from __future__ import print_function
 import sys
 import click
 
-from lta.api import Archive, process_archive
+from lta.api import Archive, process_archive, list_batches
 from lta.config import get_config, list_config
+from datetime import datetime
 
 class LtaException(Exception):
     """An lta error has occurred."""
@@ -13,7 +14,7 @@ class LtaException(Exception):
 
 # The main entry point for lta.
 @click.group(context_settings={'help_option_names': ['-h', '--help']})
-@click.version_option(version='0.1.0')
+@click.version_option(version='0.2.0')
 def lta_cli():
     """OHD long term archiving tool"""
 
@@ -26,6 +27,26 @@ def list():
         print(*sections)
     except Exception:
         sys.exit(f'No configuration file found.')
+
+
+@lta_cli.command(help="show archiving batches for an archive")
+@click.argument('archive')
+def batches(archive):
+    """List archiving batches for an archive."""
+    app_config = get_config(archive)
+    batches = list_batches(app_config.domain)
+
+    for batch in batches:
+        batch_number = batch['number']
+        batch_name = f'ohd_{archive}_{batch_number:03}'
+        interview_count = len(batch['interview_ids'])
+        created_at = datetime.fromisoformat(batch['created_at'])
+        created_at_str = created_at.strftime('%Y/%m/%d')
+        title = f'Batch {batch_number} ({batch_name}) was created on {created_at_str} and has {interview_count} interviews:'
+        click.secho(title, bold=True)
+
+        interviews = ', '.join(batch['interview_ids'])
+        click.secho(interviews)
 
 
 @lta_cli.command(help="fetch and process archive metadata")
