@@ -1,6 +1,6 @@
 import os
-import shutil
 import xml.etree.ElementTree as ET
+from shutil import copyfile
 from lxml import etree
 from pathlib import Path
 
@@ -86,8 +86,7 @@ def copy_corpus_cmdi(input_dir, output_dir, dry_run = False):
             if dry_run:
                 print(f'[DRYRUN] Copied corpus cmdi file {filepath} to {output_dir}')
             else:
-                print(filepath, output_dir)
-                shutil.copy(filepath, output_dir)
+                copyfile(filepath, output_dir)
                 print(f'Copied corpus cmdi file {filepath} to {output_dir}')
 
 
