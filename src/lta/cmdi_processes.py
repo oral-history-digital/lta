@@ -7,7 +7,7 @@ from pathlib import Path
 from lta.mediatypes import is_media_file, is_transcript_file, mediatype_from_filename
 from lta.media_files import check_directory_integrity
 from lta.xml_validation import validate_session_cmdi
-from lta.session_cmdi import change_resource_proxy_list, change_media_session_bundle, change_written_resources
+from lta.session_cmdi import change_resource_proxy_list, change_media_session_bundle
 from lta.files import create_directory_if_not_exists
 
 
@@ -55,7 +55,6 @@ def process_session_cmdi(input_file, output_file, media_dir, dry_run):
 
     change_resource_proxy_list(root, interview_id, media_files, transcript_files)
     change_media_session_bundle(root, num_parts, media_type, transcript_files)
-    change_written_resources(root)
 
 
     # Write to tempfile

@@ -26,7 +26,6 @@ def change_resource_proxy_list(root_elem, interview_id, media_files,
     transcript_files):
     resources = root_elem.find(f'{ns}Resources')
     resource_proxy_list = resources.find(f'{ns}ResourceProxyList')
-    resource_proxy_list.clear()
 
     for idx, media_file in enumerate(media_files):
         write_resource_xml(resource_proxy_list, interview_id, media_file,
@@ -44,15 +43,8 @@ def get_media_session(root_elem):
     return media_session
 
 
-def remove_media_annotation_bundles(node):
-    bundles = node.findall(f'{ns}media-annotation-bundle')
-    for bundle in bundles:
-        node.remove(bundle)
-
-
 def change_media_session_bundle(root_elem, num_bundles, media_type, transcript_files):
     media_session = get_media_session(root_elem)
-    remove_media_annotation_bundles(media_session)
 
     actors = get_actors(root_elem)
     actors_str = ' '.join(actors)
@@ -82,13 +74,6 @@ def change_media_session_bundle(root_elem, num_bundles, media_type, transcript_f
         annotation_format_inner = ET.SubElement(annotation_format_outer,
             'AnnotationFormat')
         annotation_format_inner.text = transcript_mimetype
-
-
-def change_written_resources(root_elem):
-    media_session = get_media_session(root_elem)
-    written_resources = media_session.findall(f'{ns}WrittenResource')
-    for written_resource in written_resources:
-        media_session.remove(written_resource)
 
 
 def get_actors(root_elem):
