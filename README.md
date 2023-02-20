@@ -74,6 +74,15 @@ $ lta list
 adg cdoh ev
 ```
 
+You can also list the batches for an archive that are currently set up on the
+server with the `batches` command:
+
+```console
+$ lta batches ev
+Batch 1 (ohd_ev_001) was created on 2023/02/20 and has 16 interviews:
+ev001, ev002, ev003, ev004, ev005, ev006, ev007, ev008, ev009, ev010, ev011, ev012, ev013, ev014, ev015, ev016
+```
+
 The archiving process basically consists of two steps: 1) downloading metadata files
 from the server and 2) enriching those files with information about the archived
 media files and transcript files. Those steps are combined into one step within
