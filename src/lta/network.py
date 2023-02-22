@@ -51,5 +51,4 @@ def fetch_session_metadata(domain, batch_number, interview_id, dir_name):
     with open(file_path, 'wb') as f:
         f.write(response.content)
 
-    validate_session_cmdi(file_path)
     return True

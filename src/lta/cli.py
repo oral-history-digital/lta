@@ -6,6 +6,7 @@ import click
 
 from lta.api import Archive, process_archive, list_batches
 from lta.config import get_config, list_config
+from lta import __version__
 from datetime import datetime
 
 class LtaException(Exception):
@@ -14,7 +15,7 @@ class LtaException(Exception):
 
 # The main entry point for lta.
 @click.group(context_settings={'help_option_names': ['-h', '--help']})
-@click.version_option(version='0.2.0')
+@click.version_option(version=__version__)
 def lta_cli():
     """OHD long term archiving tool"""
 
