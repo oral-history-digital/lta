@@ -31,13 +31,6 @@ def process_archive(archive, temp_dir, media_dir, fetch_only, skip_fetch,
     if not isinstance(temp_dir, str):
         raise TypeError('temp_dir must be string')
 
-    if not os.path.exists(media_dir):
-        raise FileNotFoundError(f'Configuration error: media dir {media_dir} does not exist')
-
-    if not os.path.isdir(media_dir):
-        raise NotADirectoryError(f'Configuration error: media dir {media_dir} is not a directory')
-
-
     lta.files.create_directory_if_not_exists(temp_dir)
 
     if not skip_fetch:
@@ -45,6 +38,12 @@ def process_archive(archive, temp_dir, media_dir, fetch_only, skip_fetch,
 
     if fetch_only:
         return
+
+    if not os.path.exists(media_dir):
+        raise FileNotFoundError(f'Configuration error: media dir {media_dir} does not exist')
+
+    if not os.path.isdir(media_dir):
+        raise NotADirectoryError(f'Configuration error: media dir {media_dir} is not a directory')
 
     copy_corpus_cmdi(temp_dir, output_dir, dry_run)
 
