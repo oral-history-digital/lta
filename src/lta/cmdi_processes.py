@@ -79,14 +79,12 @@ def copy_corpus_cmdi(input_dir, output_dir, dry_run = False):
     files = os.listdir(input_dir)
 
     for file in files:
-        filepath = os.path.join(input_dir, file)
+        source_path = os.path.join(input_dir, file)
 
-        if os.path.isfile(filepath):  # corpus cmdi file
-            if dry_run:
-                print(f'[DRYRUN] Copied corpus cmdi file {filepath} to {output_dir}')
-            else:
-                copyfile(filepath, output_dir)
-                print(f'Copied corpus cmdi file {filepath} to {output_dir}')
+        if os.path.isfile(source_path):  # Corpus cmdi should be the only file in the directory.
+            target_path = os.path.join(output_dir, file)
+            copyfile(source_path, target_path)
+            print(f'{"[DRYRUN] " if dry_run else ""}Created file {target_path}')
 
 
 def process_session_cmdi_dir(input_dir, output_dir, media_dir, dry_run = False):
