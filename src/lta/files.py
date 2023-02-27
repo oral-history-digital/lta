@@ -1,11 +1,20 @@
 import os
 import hashlib
+from shutil import rmtree
 
 
 def create_directory_if_not_exists(path):
     """Check if directory exists and create it otherwise."""
     if not os.path.exists(path):
         os.mkdir(path)
+
+
+def prepare_temp_directory(path):
+    """Remove directory if it exists and create a new empty one."""
+    if os.path.exists(path):
+        rmtree(path)
+
+    os.mkdir(path)
 
 
 def file_checksum(file, hash_method):

@@ -3,7 +3,10 @@
 from collections import namedtuple
 import os
 
-import lta.files
+from lta.files import (
+    prepare_temp_directory,
+    create_checksums
+)
 from lta.network import (
     fetch_corpus_metadata,
     fetch_interview_ids,
@@ -31,8 +34,6 @@ def process_archive(archive, temp_dir, media_dir, fetch_only, skip_fetch,
     if not isinstance(temp_dir, str):
         raise TypeError('temp_dir must be string')
 
-    lta.files.create_directory_if_not_exists(temp_dir)
-
     if not skip_fetch:
         fetch_cmdi_metadata(archive, temp_dir)
 
@@ -54,6 +55,8 @@ def process_archive(archive, temp_dir, media_dir, fetch_only, skip_fetch,
 
 def fetch_cmdi_metadata(archive, temp_dir):
     """Fetch corpus cmdi, get interview ids and get session cmdis."""
+    prepare_temp_directory(temp_dir)
+
     fetch_corpus_metadata(archive.name, archive.domain, archive.batch, temp_dir)
     print(f'Fetched corpus cmdi...')
 
@@ -70,11 +73,10 @@ def list_batches(domain):
     return fetch_archiving_batches(domain)
 
 
-def create_checksums(dir, algorithm):
+def create_file_checksums(dir, algorithm):
     """Recursively create checksums in directory with the specified algorithm."""
-
-    lta.files.create_checksums(dir, algorithm)
+    create_checksums(dir, algorithm)
 
 
 if __name__ == '__main__':
-    create_checksums('test_video.mp4', 'sha256')
+    create_file_checksums('test_video.mp4', 'sha256')
