@@ -50,6 +50,25 @@ def batches(archive):
         click.secho(interviews)
 
 
+@lta_cli.command(help="check media files")
+@click.argument('archive')
+@click.argument('batch', default=1)
+def check(archive, batch):
+    """Check media files."""
+    click.secho(archive)
+    click.secho(batch)
+
+    # TODO:
+    # Check metadata against files:
+    # Check if media folders are missing.
+    # Check if there are media folders that are not in the metadata.
+    # Check if the number of tapes of an interview corresponds to the number of media files.
+    # Check media files alone:
+    # Check if every media file has a transcript file.
+    # Check for unknown file formats.
+    # Check for files with 0 bytes.
+
+
 @lta_cli.command(help="fetch and process archive metadata")
 @click.argument('archive')
 @click.option('-b', '--batch', default=1, show_default=True, help='batch number')
