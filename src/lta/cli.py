@@ -28,7 +28,7 @@ def list():
         sections = list_config()
         print(*sections)
     except Exception:
-        sys.exit(f"No configuration file found.")
+        sys.exit("No configuration file found.")
 
 
 @lta_cli.command(help="show archiving batches for an archive")

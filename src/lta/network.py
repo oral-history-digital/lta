@@ -2,7 +2,7 @@ import os
 import requests
 
 from lta.files import create_directory_if_not_exists
-from lta.xml_validation import validate_corpus_cmdi, validate_session_cmdi
+from lta.xml_validation import validate_corpus_cmdi
 
 
 def fetch_corpus_metadata(archive_name, archive_domain, batch_number, dir_name):

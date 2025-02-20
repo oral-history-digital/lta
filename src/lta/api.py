@@ -56,7 +56,7 @@ def fetch_cmdi_metadata(archive, temp_dir):
     prepare_temp_directory(temp_dir)
 
     fetch_corpus_metadata(archive.name, archive.domain, archive.batch, temp_dir)
-    print(f"Fetched corpus cmdi...")
+    print("Fetched corpus cmdi...")
 
     interview_ids = fetch_interview_ids(archive.domain, archive.batch)
     print(
