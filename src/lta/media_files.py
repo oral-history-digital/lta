@@ -23,7 +23,7 @@ def check_directory_integrity(path):
     files_after_blacklist = list(filter(filter_blacklisted_files, files))
 
     first_file = files_after_blacklist[0]
-    m = re.search('_(\d{2})_', first_file)
+    m = re.search(r'_(\d{2})_', first_file)
     first_match = m.group(1)
 
     num_parts = int(first_match)
