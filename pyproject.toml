@@ -1,6 +1,6 @@
 [project]
 name = "lta"
-version = "0.1.0"
+version = "0.3.0"
 description = "Long term archiving tool for oh.d archives"
 readme = "README.md"
 authors = [
