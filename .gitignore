@@ -1,6 +1,10 @@
-/build
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
 *.egg-info
-__pycache__
-/.vscode
-/lta_venv
-/venv
+
+# Virtual environments
+.venv
