@@ -9,8 +9,8 @@ def validate_xml(file_path, schema):
 
 
 def validate_corpus_cmdi(file_path):
-    validate_xml(file_path, 'media-corpus-profile.xsd')
+    validate_xml(file_path, "media-corpus-profile.xsd")
 
 
 def validate_session_cmdi(file_path):
-    validate_xml(file_path, 'media-session-profile.xsd')
+    validate_xml(file_path, "media-session-profile.xsd")

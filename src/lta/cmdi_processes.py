@@ -11,7 +11,7 @@ from lta.session_cmdi import change_resource_proxy_list, change_media_session_bu
 from lta.files import create_directory_if_not_exists
 
 
-ET.register_namespace('', 'http://www.clarin.eu/cmd/')
+ET.register_namespace("", "http://www.clarin.eu/cmd/")
 
 
 def pretty_print_lxml(input):
@@ -40,13 +40,14 @@ def process_session_cmdi(input_file, output_file, media_dir, dry_run):
     first_media_file = media_files[0]
     media_type = mediatype_from_filename(first_media_file)
 
-    if (len(media_files) != len(transcript_files)):
-        raise ValueError(f'{input_file}: Number of media files does not match number of transcript files.')
+    if len(media_files) != len(transcript_files):
+        raise ValueError(
+            f"{input_file}: Number of media files does not match number of transcript files."
+        )
 
     check_directory_integrity(dir_path)
 
     num_parts = len(media_files)
-
 
     # Parse and change xml.
 
@@ -56,24 +57,22 @@ def process_session_cmdi(input_file, output_file, media_dir, dry_run):
     change_resource_proxy_list(root, interview_id, media_files, transcript_files)
     change_media_session_bundle(root, num_parts, media_type, transcript_files)
 
-
     # Write to tempfile
-    output = ET.tostring(root, encoding='utf-8', xml_declaration=True)
+    output = ET.tostring(root, encoding="utf-8", xml_declaration=True)
     prettified_output = pretty_print_lxml(output)
-
 
     # Save it.
     if dry_run:
-        print(f'[DRYRUN] Saved session cmdi file to {output_file}')
+        print(f"[DRYRUN] Saved session cmdi file to {output_file}")
     else:
-        with open(output_file, 'wb') as f:
+        with open(output_file, "wb") as f:
             f.write(prettified_output)
 
         validate_session_cmdi(output_file)
-        print(f'Saved session cmdi file to {output_file}')
+        print(f"Saved session cmdi file to {output_file}")
 
 
-def copy_corpus_cmdi(input_dir, output_dir, dry_run = False):
+def copy_corpus_cmdi(input_dir, output_dir, dry_run=False):
     """Find the corpus cmdi file in input_dir and copy it to output_dir."""
 
     files = os.listdir(input_dir)
@@ -81,13 +80,15 @@ def copy_corpus_cmdi(input_dir, output_dir, dry_run = False):
     for file in files:
         source_path = os.path.join(input_dir, file)
 
-        if os.path.isfile(source_path):  # Corpus cmdi should be the only file in the directory.
+        if os.path.isfile(
+            source_path
+        ):  # Corpus cmdi should be the only file in the directory.
             target_path = os.path.join(output_dir, file)
             copyfile(source_path, target_path)
             print(f'{"[DRYRUN] " if dry_run else ""}Created file {target_path}')
 
 
-def process_session_cmdi_dir(input_dir, output_dir, media_dir, dry_run = False):
+def process_session_cmdi_dir(input_dir, output_dir, media_dir, dry_run=False):
     """Find each session cmdi and call process function on it."""
 
     files = os.listdir(input_dir)
@@ -96,15 +97,16 @@ def process_session_cmdi_dir(input_dir, output_dir, media_dir, dry_run = False):
         filepath = os.path.join(input_dir, file)
 
         if os.path.isdir(filepath):  # directory with session cmdi.
-            input_session_cmdi = os.path.join(input_dir, file, f'{file}.xml')
+            input_session_cmdi = os.path.join(input_dir, file, f"{file}.xml")
             interview_output_dir = os.path.join(output_dir, file)
-            output_session_cmdi = os.path.join(interview_output_dir, f'{file}.xml')
+            output_session_cmdi = os.path.join(interview_output_dir, f"{file}.xml")
             interview_media_dir = os.path.join(media_dir, file)
 
             if dry_run:
-                print(f'[DRYRUN] Creating directory {interview_output_dir}')
+                print(f"[DRYRUN] Creating directory {interview_output_dir}")
             else:
                 create_directory_if_not_exists(interview_output_dir)
 
-            process_session_cmdi(input_session_cmdi, output_session_cmdi, interview_media_dir,
-                dry_run)
+            process_session_cmdi(
+                input_session_cmdi, output_session_cmdi, interview_media_dir, dry_run
+            )
