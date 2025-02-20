@@ -29,7 +29,7 @@ def get_config(archive_name):
             temp_path = parser.get(archive_name, "TempPath")
         except Exception:
             raise NoConfig(
-                f'Configuration error: no config for archive {archive_name} found. Configured archives are: {", ".join(parser.sections())}'
+                f"Configuration error: no config for archive {archive_name} found. Configured archives are: {', '.join(parser.sections())}"
             )
 
     media_path = os.path.expanduser(media_path)
