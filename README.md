@@ -28,6 +28,12 @@ lta list
 lta archive cdoh --batch=1
 ```
 
+As an alternative, you can execute the tool with [uv](https://docs.astral.sh/uv/) if you do not want to install it:
+
+```bash
+uv run lta
+```
+
 ## Configuration
 
 Your configuration file must be in your user directory, named `~/.lta.config`
