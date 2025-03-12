@@ -39,10 +39,16 @@ def check_directory_integrity(path):
     transcript_files.sort()
 
     if len(files_after_blacklist) != num_parts * 2:
-        raise FileNotFoundError(f"Found {len(files_after_blacklist)} files in {path}. Should be {num_parts * 2}.")
+        raise FileNotFoundError(
+            f"Found {len(files_after_blacklist)} files in {path}. Should be {num_parts * 2}."
+        )
 
     if len(media_files) != num_parts:
-        raise FileNotFoundError(f"Found {len(media_files)} media files in {path}. Should be {num_parts}.")
+        raise FileNotFoundError(
+            f"Found {len(media_files)} media files in {path}. Should be {num_parts}."
+        )
 
     if len(transcript_files) != num_parts:
-        raise FileNotFoundError(f"Found {len(transcript_files)} transcript files in {path}. Should be {num_parts}.")
+        raise FileNotFoundError(
+            f"Found {len(transcript_files)} transcript files in {path}. Should be {num_parts}."
+        )
