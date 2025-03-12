@@ -3,7 +3,9 @@ import os
 
 
 def mimetype_from_filename(filename):
-    """Returns a standard mimetype according to the filename's extension."""
+    """
+    Returns a standard mimetype according to the filename's extension.
+    """
     extension = Path(filename).suffix.lower()
 
     extension_to_mimetype = {
@@ -13,6 +15,7 @@ def mimetype_from_filename(filename):
         ".pdf": "application/pdf",
         ".ods": "application/vnd.oasis.opendocument.spreadsheet",
         ".csv": "text/plain",
+        ".vtt": "text/vtt",
     }
 
     if extension in extension_to_mimetype:
@@ -32,7 +35,7 @@ def is_transcript_file(filename):
     """Returns True if filename is a transcript file according to its extension."""
     pair = os.path.splitext(filename)
     ext = pair[1].lower()
-    return ext in [".ods", ".pdf", ".csv"]
+    return ext in [".ods", ".pdf", ".csv", ".vtt"]
 
 
 # TODO: Probably not used any longer.

@@ -3,9 +3,14 @@ import hashlib
 from shutil import rmtree
 
 
-def create_directory_if_not_exists(path):
+def create_directory_if_not_exists(path, dry_run=False):
     """Check if directory exists and create it otherwise."""
-    if not os.path.exists(path):
+    if os.path.exists(path):
+        return
+
+    if dry_run:
+        print(f"[DRYRUN] Creating directory {path}")
+    else:
         os.mkdir(path)
 
 

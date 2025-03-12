@@ -1,8 +1,9 @@
 import os
+from pathlib import Path
+
 import xml.etree.ElementTree as ET
 from shutil import copyfile
 from lxml import etree
-from pathlib import Path
 
 from lta.mediatypes import is_media_file, is_transcript_file, mediatype_from_filename
 from lta.media_files import check_directory_integrity
@@ -42,7 +43,7 @@ def process_session_cmdi(input_file, output_file, media_dir, dry_run):
 
     if len(media_files) != len(transcript_files):
         raise ValueError(
-            f"{input_file}: Number of media files does not match number of transcript files."
+            f"{input_file}: Number of media files ({len(media_files)}) does not match number of transcript files ({len(transcript_files)})."
         )
 
     check_directory_integrity(dir_path)
@@ -74,17 +75,16 @@ def process_session_cmdi(input_file, output_file, media_dir, dry_run):
 
 def copy_corpus_cmdi(input_dir, output_dir, dry_run=False):
     """Find the corpus cmdi file in input_dir and copy it to output_dir."""
-
     files = os.listdir(input_dir)
 
     for file in files:
         source_path = os.path.join(input_dir, file)
 
-        if os.path.isfile(
-            source_path
-        ):  # Corpus cmdi should be the only file in the directory.
+        # Corpus cmdi should be the only file in the directory.
+        if os.path.isfile(source_path):
             target_path = os.path.join(output_dir, file)
-            copyfile(source_path, target_path)
+            if not dry_run:
+                copyfile(source_path, target_path)
             print(f"{'[DRYRUN] ' if dry_run else ''}Created file {target_path}")
 
 
@@ -101,11 +101,7 @@ def process_session_cmdi_dir(input_dir, output_dir, media_dir, dry_run=False):
             interview_output_dir = os.path.join(output_dir, file)
             output_session_cmdi = os.path.join(interview_output_dir, f"{file}.xml")
             interview_media_dir = os.path.join(media_dir, file)
-
-            if dry_run:
-                print(f"[DRYRUN] Creating directory {interview_output_dir}")
-            else:
-                create_directory_if_not_exists(interview_output_dir)
+            create_directory_if_not_exists(interview_output_dir, dry_run)
 
             process_session_cmdi(
                 input_session_cmdi, output_session_cmdi, interview_media_dir, dry_run
