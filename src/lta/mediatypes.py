@@ -15,7 +15,7 @@ def mimetype_from_filename(filename):
         ".pdf": "application/pdf",
         ".ods": "application/vnd.oasis.opendocument.spreadsheet",
         ".csv": "text/plain",
-        ".vtt": "text/vtt",
+        ".vtt": "text/plain",
     }
 
     if extension in extension_to_mimetype:
