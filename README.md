@@ -14,6 +14,13 @@ of the
 
 ## Building the command line tool
 
+Make sure that you have the libxml2 and libxslt development packages installed, e.g. for a Debian system:
+
+```
+sudo apt-get install libxml2-dev libxslt-dev
+```
+
+
 Clone this repository. Enter the project directory, and type:
 
 ```bash
