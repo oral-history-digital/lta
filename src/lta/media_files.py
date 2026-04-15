@@ -10,7 +10,7 @@ def get_file_extension(filename):
 
 def filter_media_files(filename):
     ext = get_file_extension(filename)
-    return ext in [".m2ts", ".mp4", ".avi"]
+    return ext in [".m2ts", ".mp4", ".avi", ".wav"]
 
 
 def filter_transcript_files(filename):

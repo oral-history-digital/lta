@@ -12,6 +12,7 @@ def mimetype_from_filename(filename):
         ".mp4": "video/mp4",
         ".m2ts": "video/mpeg",
         ".avi": "video/x-msvideo",
+        ".wav": "audio/wav",
         ".pdf": "application/pdf",
         ".ods": "application/vnd.oasis.opendocument.spreadsheet",
         ".csv": "text/plain",
@@ -28,7 +29,7 @@ def is_media_file(filename):
     """Returns True is filename is a media file according to its extension."""
     pair = os.path.splitext(filename)
     ext = pair[1].lower()
-    return ext in [".m2ts", ".mp4", ".avi"]
+    return ext in [".m2ts", ".mp4", ".avi", ".wav"]
 
 
 def is_transcript_file(filename):
@@ -45,7 +46,7 @@ def mediatype_from_filename(filename):
 
     # TODO: Finish audio part, if possible to determinate from extension alone.
     video_extensions = [".mp4", ".m2ts", ".avi"]
-    audio_extensions = []
+    audio_extensions = [".wav"]
 
     if extension in video_extensions:
         return "video"
