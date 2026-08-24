@@ -1,16 +1,15 @@
 import os
-from pathlib import Path
-
 import xml.etree.ElementTree as ET
+from pathlib import Path
 from shutil import copyfile
+
 from lxml import etree
 
-from lta.mediatypes import is_media_file, is_transcript_file, mediatype_from_filename
-from lta.media_files import check_directory_integrity
-from lta.xml_validation import validate_session_cmdi
-from lta.session_cmdi import change_resource_proxy_list, change_media_session_bundle
 from lta.files import create_directory_if_not_exists
-
+from lta.media_files import check_directory_integrity
+from lta.mediatypes import is_media_file, is_transcript_file, mediatype_from_filename
+from lta.session_cmdi import change_media_session_bundle, change_resource_proxy_list
+from lta.xml_validation import validate_session_cmdi
 
 ET.register_namespace("", "http://www.clarin.eu/cmd/")
 

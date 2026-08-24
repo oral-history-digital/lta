@@ -1,5 +1,5 @@
-import os
 import hashlib
+import os
 from shutil import rmtree
 
 
@@ -43,11 +43,11 @@ def write_checksum(file, checksum, dry_run=True):
             f.write(checksum + "\n")
 
 
-def create_checksums(
-    dir, algorithm, ext_blacklist=["", ".md5", ".sha1", ".sha256"], dry_run=True
-):
+def create_checksums(dir, algorithm, ext_blacklist=None, dry_run=True):
     """Recursively create checksums in directory with the specified algorithm."""
 
+    if ext_blacklist is None:
+        ext_blacklist = ["", ".md5", ".sha1", ".sha256"]
     if algorithm == "MD5":
         hash_method = hashlib.md5
     elif algorithm == "SHA1":

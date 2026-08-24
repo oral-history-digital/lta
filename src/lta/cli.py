@@ -1,13 +1,13 @@
 """Command Line Interface (CLI) for lta project."""
 
-from __future__ import print_function
 import sys
+from datetime import datetime
+
 import click
 
-from lta.api import Archive, process_archive, list_batches
-from lta.config import get_config, list_config
 from lta import __version__
-from datetime import datetime
+from lta.api import Archive, list_batches, process_archive
+from lta.config import NoConfig, get_config, list_config
 
 
 class LtaException(Exception):
@@ -26,9 +26,10 @@ def list():
     """List configured archives."""
     try:
         sections = list_config()
-        print(*sections)
-    except Exception:
-        sys.exit("No configuration file found.")
+    except NoConfig as err:
+        sys.exit(str(err))
+
+    print(*sections)
 
 
 @lta_cli.command(help="show archiving batches for an archive")
@@ -88,9 +89,8 @@ def archive(
     """Fetch and process archive metadata."""
     try:
         app_config = get_config(archive)
-
-    except Exception as inst:
-        sys.exit(inst.args[0])
+    except (NoConfig, OSError) as err:
+        sys.exit(str(err))
 
     arch = Archive(app_config.domain, archive, int(batch))
     actual_output_dir = output_dir or app_config.media_path

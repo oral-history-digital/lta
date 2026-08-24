@@ -1,17 +1,16 @@
 """Main API for lta project."""
 
-from collections import namedtuple
 import os
+from collections import namedtuple
 
-from lta.files import prepare_temp_directory, create_checksums
+from lta.cmdi_processes import copy_corpus_cmdi, process_session_cmdi_dir
+from lta.files import create_checksums, prepare_temp_directory
 from lta.network import (
+    fetch_archiving_batches,
     fetch_corpus_metadata,
     fetch_interview_ids,
     fetch_session_metadata,
-    fetch_archiving_batches,
 )
-from lta.cmdi_processes import copy_corpus_cmdi, process_session_cmdi_dir
-
 
 # Archive element types : [summary: str, owner: str, done: bool, id: int]
 Archive = namedtuple("Archive", ["domain", "name", "batch", "media_dir", "id"])

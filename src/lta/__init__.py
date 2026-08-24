@@ -4,5 +4,5 @@ from importlib.metadata import version
 
 __version__ = version("lta")
 
-from .api import *  # noqa
+from .api import *
 from .cli import lta_cli  # noqa
