@@ -95,15 +95,18 @@ def archive(
     arch = Archive(app_config.domain, archive, int(batch))
     actual_output_dir = output_dir or app_config.media_path
 
-    process_archive(
-        arch,
-        app_config.temp_path,
-        app_config.media_path,
-        fetch_only,
-        skip_fetch,
-        actual_output_dir,
-        dry_run,
-    )
+    try:
+        process_archive(
+            arch,
+            app_config.temp_path,
+            app_config.media_path,
+            fetch_only,
+            skip_fetch,
+            actual_output_dir,
+            dry_run,
+        )
+    except ValueError as err:
+        sys.exit(str(err))
 
 
 if __name__ == "__main__":
