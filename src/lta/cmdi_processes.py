@@ -36,14 +36,17 @@ def process_session_cmdi(input_file, output_file, media_dir, dry_run):
     transcript_files = list(filter(is_transcript_file, list(files)))
     transcript_files.sort()
 
-    # Get media_type from first media file.
-    first_media_file = media_files[0]
-    media_type = mediatype_from_filename(first_media_file)
+    if not media_files:
+        raise ValueError(f"No media files found in {dir_path}.")
 
     if len(media_files) != len(transcript_files):
         raise ValueError(
-            f"{input_file}: Number of media files ({len(media_files)}) does not match number of transcript files ({len(transcript_files)})."
+            f"Number of media files ({len(media_files)}) does not match number of transcript files ({len(transcript_files)})."
         )
+
+    # Get media_type from first media file.
+    first_media_file = media_files[0]
+    media_type = mediatype_from_filename(first_media_file)
 
     check_directory_integrity(dir_path)
 
@@ -88,9 +91,15 @@ def copy_corpus_cmdi(input_dir, output_dir, dry_run=False):
 
 
 def process_session_cmdi_dir(input_dir, output_dir, media_dir, dry_run=False):
-    """Find each session cmdi and call process function on it."""
+    """Find each session cmdi and call process function on it.
 
-    files = os.listdir(input_dir)
+    Errors are collected per interview so that all problems are reported
+    at once instead of aborting on the first one.
+    """
+
+    files = sorted(os.listdir(input_dir))
+    errors = []
+    num_sessions = 0
 
     for file in files:
         filepath = os.path.join(input_dir, file)
@@ -100,8 +109,28 @@ def process_session_cmdi_dir(input_dir, output_dir, media_dir, dry_run=False):
             interview_output_dir = os.path.join(output_dir, file)
             output_session_cmdi = os.path.join(interview_output_dir, f"{file}.xml")
             interview_media_dir = os.path.join(media_dir, file)
-            create_directory_if_not_exists(interview_output_dir, dry_run)
+            num_sessions += 1
 
-            process_session_cmdi(
-                input_session_cmdi, output_session_cmdi, interview_media_dir, dry_run
-            )
+            try:
+                create_directory_if_not_exists(interview_output_dir, dry_run)
+                process_session_cmdi(
+                    input_session_cmdi,
+                    output_session_cmdi,
+                    interview_media_dir,
+                    dry_run,
+                )
+            except (
+                ValueError,
+                OSError,
+                TypeError,
+                IndexError,
+                AttributeError,
+                ET.ParseError,
+            ) as err:
+                errors.append(f"{file}: {err}")
+
+    if errors:
+        raise ValueError(
+            f"{len(errors)} of {num_sessions} interviews could not be processed:\n"
+            + "\n".join(errors)
+        )
