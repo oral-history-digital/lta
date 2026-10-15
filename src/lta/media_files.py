@@ -1,6 +1,8 @@
 import os
 import re
 
+from lta.mediatypes import MEDIA_EXTENSIONS
+
 
 def get_file_extension(filename):
     pair = os.path.splitext(filename)
@@ -10,7 +12,7 @@ def get_file_extension(filename):
 
 def filter_media_files(filename):
     ext = get_file_extension(filename)
-    return ext in [".m2ts", ".mp4", ".avi", ".wav"]
+    return ext in MEDIA_EXTENSIONS
 
 
 def filter_transcript_files(filename):

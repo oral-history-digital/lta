@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
 
+VIDEO_EXTENSIONS = [".mp4", ".m2ts", ".avi"]
+AUDIO_EXTENSIONS = [".wav", ".mp3"]
+MEDIA_EXTENSIONS = VIDEO_EXTENSIONS + AUDIO_EXTENSIONS
+
 
 def mimetype_from_filename(filename):
     """
@@ -13,6 +17,7 @@ def mimetype_from_filename(filename):
         ".m2ts": "video/mpeg",
         ".avi": "video/x-msvideo",
         ".wav": "audio/wav",
+        ".mp3": "audio/mpeg",
         ".pdf": "application/pdf",
         ".ods": "application/vnd.oasis.opendocument.spreadsheet",
         ".csv": "text/plain",
@@ -29,7 +34,7 @@ def is_media_file(filename):
     """Returns True is filename is a media file according to its extension."""
     pair = os.path.splitext(filename)
     ext = pair[1].lower()
-    return ext in [".m2ts", ".mp4", ".avi", ".wav"]
+    return ext in MEDIA_EXTENSIONS
 
 
 def is_transcript_file(filename):
@@ -39,18 +44,14 @@ def is_transcript_file(filename):
     return ext in [".ods", ".pdf", ".csv", ".vtt"]
 
 
-# TODO: Probably not used any longer.
 def mediatype_from_filename(filename):
     """Returns 'video' or 'audio' according to the media filename's extension."""
     extension = Path(filename).suffix.lower()
 
     # TODO: Finish audio part, if possible to determinate from extension alone.
-    video_extensions = [".mp4", ".m2ts", ".avi"]
-    audio_extensions = [".wav"]
-
-    if extension in video_extensions:
+    if extension in VIDEO_EXTENSIONS:
         return "video"
-    elif extension in audio_extensions:
+    elif extension in AUDIO_EXTENSIONS:
         return "audio"
     else:
         raise TypeError(f"cannot determine media file type for {filename}")
